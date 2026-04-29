@@ -1,23 +1,8 @@
 {
-  "containments" : 
-  [
+  "containments" : [
     {
       "alias" : "MOTOR1",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}.Motor1"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
       "containedType" : "MOTOR",
       "description" : "",
@@ -25,21 +10,7 @@
     },
     {
       "alias" : "MOTOR2",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}.Motor2"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
       "containedType" : "MOTOR",
       "description" : "",
@@ -47,21 +18,7 @@
     },
     {
       "alias" : "MOTOR3",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}.Motor3"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
       "containedType" : "MOTOR",
       "description" : "",
@@ -69,67 +26,25 @@
     },
     {
       "alias" : "PUMP1",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}.Pump1"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
-      "containedType" : "PUMP",
+      "containedType" : "Pump",
       "description" : "",
       "mandatory" : true
     },
     {
       "alias" : "PUMP2",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}.Pump2"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
-      "containedType" : "PUMP",
+      "containedType" : "Pump",
       "description" : "",
       "mandatory" : true
     },
     {
       "alias" : "PUMP3",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}.Pump3"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
-      "containedType" : "PUMP",
+      "containedType" : "Pump",
       "description" : "",
       "mandatory" : true
     }
@@ -137,5 +52,6 @@
   "description" : "Pump train — 3 pumps + 3 motors",
   "level" : "ASSET",
   "name" : "PUMPTRAIN",
-  "variables" : []
+  "subParameters" : [ ],
+  "variables" : [ ]
 }
