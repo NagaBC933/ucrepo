@@ -1,0 +1,17 @@
+{
+  "containments" : [ ],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "Wheel",
+  "subParameters" : [ ],
+  "variables" : [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "size",
+      "variableType" : "dynamic"
+    }
+  ]
+}
