@@ -1,0 +1,17 @@
+{
+  "containments" : [ ],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "car",
+  "subParameters" : [ ],
+  "variables" : [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "wheelbase",
+      "variableType" : "dynamic"
+    }
+  ]
+}
