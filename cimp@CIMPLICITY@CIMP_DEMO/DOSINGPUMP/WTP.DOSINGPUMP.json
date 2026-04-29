@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "WTP.DOSINGPUMP",
+  "InstanceType" : "DOSINGPUMP",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

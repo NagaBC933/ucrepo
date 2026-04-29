@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "WTP.CHLORINATION",
+  "InstanceType" : "CHLORINATION",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

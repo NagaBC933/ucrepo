@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "WTP.OUTLETPUMP",
+  "InstanceType" : "OUTLETPUMP",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

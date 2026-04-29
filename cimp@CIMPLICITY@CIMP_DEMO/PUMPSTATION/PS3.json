@@ -1,0 +1,25 @@
+{
+  "InstanceName" : "PS3",
+  "InstanceType" : "PUMPSTATION",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$ADDRESS",
+      "Value" : "ns=2;s=OPCUASimulator.Simulator.csv2opcua.PS3."
+    },
+    {
+      "ID" : "$DEVICE_ID",
+      "Value" : "LOCAL_IGS"
+    },
+    {
+      "ID" : "$RESOURCE_ID",
+      "Value" : "PS3"
+    },
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : "Pump Station 3"
+    }
+  ],
+  "TemplateName" : "Base"
+}

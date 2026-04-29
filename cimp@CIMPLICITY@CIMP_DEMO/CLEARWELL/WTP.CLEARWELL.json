@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "WTP.CLEARWELL",
+  "InstanceType" : "CLEARWELL",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "WTP.FILTRATIONCONTROL",
+  "InstanceType" : "FILTRATIONCONTROL",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "PS3.WETWELL",
+  "InstanceType" : "WETWELL",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

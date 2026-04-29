@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "WTP.INTAKE",
+  "InstanceType" : "INTAKE",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}

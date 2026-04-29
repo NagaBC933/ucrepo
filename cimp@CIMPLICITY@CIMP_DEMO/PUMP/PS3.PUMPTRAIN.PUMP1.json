@@ -1,0 +1,13 @@
+{
+  "InstanceName" : "PS3.PUMPTRAIN.PUMP1",
+  "InstanceType" : "PUMP",
+  "Routing" : [],
+  "SubParamValues" : 
+  [
+    {
+      "ID" : "$DESCRIPTION",
+      "Value" : ""
+    }
+  ],
+  "TemplateName" : "Base"
+}
