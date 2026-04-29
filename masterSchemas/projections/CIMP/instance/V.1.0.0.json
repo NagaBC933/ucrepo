@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "title": "Instance Projection Schema",
+  "$schema": "https://json-schema.org/draft/2012-12/schema",
+  "required": [
+    "instanceName",
+    "instanceType",
+    "templateName"
+  ],
+  "properties": {
+    "containments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "containedInstanceType",
+          "containedInstanceName"
+        ],
+        "properties": {
+          "containedInstanceName": {
+            "type": "string"
+          },
+          "containedInstanceType": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "instanceName": {
+      "type": "string"
+    },
+    "instanceType": {
+      "type": "string"
+    },
+    "templateName": {
+      "type": "string"
+    },
+    "subParamValues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ID",
+          "Value"
+        ],
+        "properties": {
+          "ID": {
+            "type": "string"
+          },
+          "Value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "routing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional array of strings for routing."
+    }
+  },
+  "description": "Schema for validating instance projection data"
+}

@@ -1,0 +1,1 @@
+proficyhub-mvn/enterprisemodel:wgc-installer-masterSchemas:1.0.0

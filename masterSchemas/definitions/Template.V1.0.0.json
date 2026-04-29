@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://github.build.ge.com/DPM/em-central-repo/blob/convertWordToJson/masterSchemas/definitions/Template.V1.0.0.json",
+  "title": "Schema for Templates",
+  "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "templateContainments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/TemplateContainment"
+            }
+          },
+          "templateVariables": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/TemplateVariable"
+            }
+          },
+          "projections": {
+            "$ref": "#/definitions/Projections"
+          }
+        },
+        "required": [
+          "name",
+          "templateContainments",
+          "templateVariables",
+          "projections"
+        ]
+       
+  ,
+  "definitions": {
+    "TemplateContainment": {
+      "type": "object",
+      "properties": {
+        "include": {
+          "type": "boolean"
+        },
+        "aliasName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "include",
+        "aliasName"
+      ]
+    },
+    "TemplateVariable": {
+      "type": "object",
+      "properties": {
+        "include": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "include",
+        "name"
+      ]
+    },
+    "Projections": {
+      "type": "object",
+      "properties": {
+        "CIMP": {
+          "type": "string",
+          "example": "../projections/CIMP/Base.json"
+        },
+        "HIST": {
+          "type": "string",
+          "example": "../projections/HIST/Base.json"
+        },
+        "MES": {
+          "type": "string",
+          "example": "../projections/MES/Base.json"
+        }
+      }
+    }
+  }
+}

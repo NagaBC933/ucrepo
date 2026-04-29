@@ -1,0 +1,1494 @@
+{
+    "$id": "https://proficy.com/product.schema.json",
+    "title": "ScadaClass",
+    "description": "CIMPLICITY class definition",
+    "type": "object",
+    "required": [
+        "ClassId"
+    ],
+    "properties": {
+        "SchemaVersion": {
+            "type" : "string",
+            "description": "filename which will be used to validate Projection" 
+          },
+         "DateTime": {
+            "type": "string",
+            "description": "Date and time of the export operation"
+         },
+        "ClassId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "description": "the unique ID for this class",
+            "example": "WorkCell"
+        },
+        "Description": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 80,
+            "description": "the description for this class",
+            "example": "a work cell in the plant"
+        },
+        "GraphicsFile": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "relative link to screen file",
+            "example": "\\scrrens\\workcell.json" 
+        },
+        "DefaultGraphic": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "graphic object name used as default graphich for CIMPLICITY object",
+            "example": "tank"
+        },
+        "FaceplateScreen": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "relative link to screen file",
+            "example": "\\scrrens\\workcell.json"
+        },
+        "HelpFile": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "relative link to .chm or .hlp file",
+            "example": "\\scrrens\\workcell.hlp"
+        },
+        "PreCreateScript": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "relative link to script",
+            "example": "\\scrrens\\workcell.bcl"
+        },
+        "PostCreateScript": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "relative link to script",
+            "example": "\\scrrens\\workcell.bcl"
+        },
+        "PreDeleteScript": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "description": "relative link to script",
+            "example": "\\scrrens\\workcell.bcl"
+        },
+        "ClassVersion": {
+            "type": "integer",
+            "description": "the version number for this class, incremented with each change made to the class",
+            "example": 2,
+            "inclusiveMinimum": 0,
+            "inclusiveMaximum":  2147483647
+        },
+        "Attributes": {
+            "type": "array",
+            "description": "an array of the attributes of this class",
+            "items": {
+                "$ref": "#/components/schemas/CimClassAttribute"
+            }
+        },
+        "DataItems": {
+            "type": "array",
+            "description": "an array of the data items of this class",
+            "items": {
+                "$ref": "#/components/schemas/CimPoint"
+            }
+        },
+        "Events": {
+            "type": "array",
+            "description": "an array of the events of this class",
+            "items": {
+                "$ref": "#/components/schemas/CimEvent"
+            }
+        },
+        "Actions": {
+            "type": "array",
+            "description": "an array of the actions of this class",
+            "items": {
+                "$ref": "#/components/schemas/CimAction"
+            }
+        },
+        "Scripts": {
+            "type": "array",
+            "description": "an array of the scripts of this class",
+            "items": {
+                "$ref": "#/components/schemas/CimScript"
+            }
+        },
+        "CompositeMembers": {
+            "type": "array",
+            "description": "an array of the compiste members of this class",
+            "items": {
+                "$ref": "#/components/schemas/CimClassCompositeMember"
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CimClassAttribute": {
+                "description": "is an object that represents an attribute of a class.",
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "string",
+                        "description": "is a string indicating the ID of the class attribute",
+                        "minLength": 0,
+                        "maxLength": 16
+                    },
+                    "Value": {
+                        "type": "string",
+                        "description": "is a string containing the value of the attribute. validation depends on ",
+                        "minLength": 0,
+                        "maxLength": 256
+                         
+                    },
+                    "BrowserType": {
+                        "type": "string",
+                        "enum": [
+							"",
+                            "cimBrowserAlarmClass",
+                            "cimBrowserDevice",
+                            "cimBrowserMeasurementUnit",
+                            "cimBrowserPoint",
+                            "cimBrowserPort",
+                            "cimBrowserResource",
+                            "cimBrowserRole",
+                            "cimBrowserUser"
+                        ]
+                    }
+                },
+                "HelpString": {
+                    "type": "string",
+                    "description": " is a string containing the value that will be displayed in a tool tip in the Object dialog box when the user places the cursor over the field"
+                },
+                "InstantiationType": {
+                    "type": "string",
+                    "enum": [
+						"",
+                        "cimInstantionHidden",
+                        "cimInstantionOptional",
+                        "cimInstantionReadOnly",
+                        "cimInstantionRequired",
+                        "cimInstantionStatic",
+                        "cimInstantionStaticDisplay"
+                    ]
+                },
+                "Order": {
+                    "type": "integer",
+                    "description": "controls the order in which this attribute will appear in relation to other attributes"
+                },
+                "Prompt": {
+                    "type": "String",
+                    "description": "is a string containing the value displayed when the user is prompted for this attribute."
+                },
+                "PropertyPage": {
+                    "type": "String",
+                    "description": "controls the page this attribute will appear on AttributeType."
+                },
+                "Reference": {
+                    "type": "Boolean",
+                    "description": "sets weather this attribute is a refrence."
+                },
+                "AttributeType": {
+                    "type": "string",
+                    "enum": [
+						"",
+                        "cimAttributeBoolean",
+                        "cimAttributeString",
+                        "cimAttributeAnalog "
+                    ]
+                }
+            },
+            "CimClassCompositeMember": {
+                "description": "is a object to configure the CimClassCompositeMember",
+                "type": "object",
+                "properties": {
+                    "ID": {
+                        "type": "string",
+                        "description": "s a string that contains the name of the composite member.",
+                        "minLength": 0,
+                        "maxLength": 255
+                    },
+                    "ClassID": {
+                        "type": "string",
+                        "description": "is a tring that contains the name of the class of composite member.",
+                        "minLength": 0,
+                        "maxLength": 32
+                    },
+                    "Count": {
+                        "type": "integer",
+                        "description": "is total number of calssmembers contained within the composite member."
+                    },
+                    "Expressions": {
+                        "type": "array",
+                        "description": "expression list associated with composite member.",
+                        "items": {
+                            "$ref": "#/components/schemas/CimClassCompositeMemberExpression"
+                        }
+                    },
+                    "ClassMembers": {
+                        "type" : "array",
+                        "description": "class members list associated with composite member.",
+                        "items": {
+                            "$ref": "#/components/schemas/CimClassMember"
+                        }
+                    },
+                    "Description": {
+                        "type" : "string",
+                        "description" : "description of composite class member"
+                    }
+                }
+            },
+            "CimClassCompositeMemberExpression": {
+                "description": "is a object to configure the expression attributes",
+                "type": "object",
+                "properties": {
+                    "FirstOperandNum": {
+                        "description": "is number that hlds the first (or left hand) side of the operand if the value is to be treated as a number. Use CimClassDataItemExpression.FirstOperandString if your value is a string",
+                        "type": "number"
+                    },
+                    "FirstOperandString": {
+                        "description": "is string that hlds the first (or left) hand side of the operand. Use CimClassDataItemExpression.FirstOperandNum if your value is a number",
+                        "type": "string"
+                    },
+                    "ID": {
+                        "description": "is a read only attribute that represents the ID of this expression",
+                        "type": "string"
+                    },
+                    "Operator": {
+                        "description": "the operand that will be used to evaluate each side of this expression.",
+                        "$ref": "#/components/schemas/CimExpressionOperandTypesEnum"
+                    },
+                    "SecondOperandNum": {
+                        "description": "is number that hlds the first (or left) hand side of the operand if the value is to be treated as a number. Use CimClassDataItemExpression.SecondOperandString if your value is a string",
+                        "type": "number"
+                    },
+                    "SecondOperandString": {
+                        "description": "is string that hlds the second (or right hand) side of the operand. Use CimClassDataItemExpression.SecondOperandNum if your value is a number",
+                        "type": "string"
+                    }
+                }
+            },
+            "CimClassMember": {
+                "type": "object",
+                "description": "is a object to configure class member",
+                "properties": {
+                    "Attributes" : {
+                    "type": "array",
+                    "description": "an array of the attributes of this class",
+                    "items": {
+                    "$ref": "#/components/schemas/CimClassMemberAttribute"
+                        }
+                    },
+                    "ClassID" : {
+                        "type" : "string",
+                        "description": "is a string that contains the name of the class of class member.",
+                        "minLength": 0,
+                        "maxLength": 32
+                    },
+                    "ID" : {
+                        "type" : "string",
+                        "description": "is a string that contains the ID of the class member."
+                    },
+                    "Routing" : {
+                        "type" : "array",
+                        "description": "collection object that is used to add, modify and delete alarm routings for the class member. Property is only available if the class defines data items that have alarms.",
+                        "items": {
+                          "type": "string"
+                        }
+                    }
+                }
+            },
+            "CimClassMemberAttribute": {
+                "type" : "object",
+                "description" : "is an object to configure the class member attribute",
+                "properties": {
+                    "ID" : {
+                       "type" : "string",
+                       "description" : "id of the class member attribute"
+                    },
+                    "Value": {
+                        "type" : "string",
+                        "description" : "value of the class member attribute"
+                    }
+                }
+            },
+            "CimEvent": {
+                "type": "object",
+                "description": "is an object to configure the event",
+                "properties": {
+                    "ID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the event."
+                    },
+                    "PointID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the point."
+                    },
+                    "PointValue": {
+                        "type": "string",
+                        "description": " is a string that contains the point value."
+                    },
+                    "AlarmID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the alarm."
+                    },
+                    "AlarmOnOverflow": {
+                        "type": "boolean",
+                        "description": "is a flag that specifies whether to generate an alarm when event queue overflows."
+                    },
+                    "ArrayIndex": {
+                        "type": "integer",
+                        "description": "is an index of point if event is of any POINT event type and point is array point."
+                    },
+                    "ClassID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the alarm class."
+                    },
+                    "Enabled": {
+                        "type": "boolean",
+                        "description": "is a flag that specifies the enabled state of the event."
+                    },
+                    "EventExecution": {
+                        "type": "string",
+                        "enum": [
+							"",
+                            "cimSequentialExecution",
+                            "cimParallelExecution",
+                            "cimThreadPoolExecution"
+                        ]
+                    },
+                    "EventTime": {
+                        "type": "string",
+                        "description": "is a string that contains the time of the event."
+                    },
+                    "LogErrorOnOverFlow ": {
+                        "type": "Boolean",
+                        "description": "is a flag that specifies whether to log error when event queue overflows."
+                    },
+                    "MaxQueueSize": {
+                        "type": "integer",
+                        "description": " is a value that specifies the maximum number of the events that can be allowed in the event-queue."
+                    },
+                    "ResourceID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the resource."
+                    },
+                    "TimeInterval": {
+                        "type": "string",
+                        "description": " is a string that contains the time interval of the event."
+                    },
+                    "EventType": {
+                        "type": "string",
+                        "enum": [
+							"",
+                            "cimAlarmGenerated",
+                            "cimAlarmAcknowledged",
+                            "cimAlarmReset",
+                            "cimAlarmDeleted",
+                            "cimPointChange",
+                            "cimPointUnavailable",
+                            "cimPointEquals",
+                            "cimPointUpdate",
+                            "cimPointTransHigh",
+                            "cimPointTransLow",
+                            "cimTimed",
+                            "cimRunOnce",
+                            "cimDisabled"
+                        ]
+                    },
+                    "Actions": {
+                        "type": "array",
+                        "description": "an array of the actions of this class",
+                        "items": {
+                            "$ref": "#/components/schemas/CimEventAction"
+                        }
+                    }
+                }
+            },
+            "CimEventAction": {
+                "type": "object",
+                "description": "is a object to configure the event action",
+                "properties": {
+                    "ActionID": {
+                        "type": "string",
+                        "description": " is a string that contains the name of the action."
+                    },
+                    "ActionOrder": {
+                        "type": "integer",
+                        "description": " is a value that specifies the order of the actions."
+                    },
+                    "EventID": {
+                        "type": "string",
+                        "description": " is a string that contains the name of the event"
+                    },
+                    "LogFlag ": {
+                        "type": "Boolean",
+                        "description": " is a flag that specifies whether event and action to be logged to the Database Logger Event Log"
+                    }
+                }
+            },
+            "CimAction": {
+                "type": "object",
+                "description": "is a object to configure the action",
+                "properties": {
+                    "ID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the action."
+                    },
+                    "AlarmID": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the alarm."
+                    },
+                    "PointID ": {
+                        "type": "string",
+                        "description": "is a string that contains the name of the point."
+                    },
+                    "PointValue ": {
+                        "type": "string",
+                        "description": " is a string that contains the point value."
+                    },
+                    "ResourceID ": {
+                        "type": "string",
+                        "description": "  is a string that contains the name of the resource.."
+                    },
+                    "ParameterFile ": {
+                        "type": "string",
+                        "description": " is a string that contains the name of the parameter file."
+                    },
+                    "ScriptName": {
+                        "type": "string",
+                        "description": " is a string that contains the name of the script name.."
+                    },
+                    "SourcePointID ": {
+                        "type": "string",
+                        "description": " is a string that contains the name of the point"
+                    },
+                    "ActionType": {
+                        "type": "string",
+                        "enum": [
+							"",
+                            "cimSetPoint",
+                            "cimLogOnly",
+                            "cimTransSet",
+                            "cimSrcTransSet",
+                            "cimPointAlarmEnable",
+                            "cimPointAlarmDisable",
+                            "cimPointAlarmAck",
+                            "cimRunScript",
+                            "cimAutoRecipe"
+                        ]
+                    }
+                }
+            },
+			"CimScript" : {
+				"description" : "object that describes script file info",
+				"type" : "object",
+				"properties" : {
+					"ID" : {
+					 "description" : "ID gives the information of a file name without class"
+					},
+					"Value" : {
+						"description" : "Values gives the relative path of file located"
+					}
+				}
+			},
+            "CimPoint": {
+                "description": "fields that describe a CIMPLICITY point",
+                "type": "object",
+                "properties": {
+                    "AttributeSet": {
+                        "description": "string indicating the Attribute set to be used for the point. Defaults to the empty string when creating a new point.",
+                        "type": "string"
+                    },
+                    "DataLen": {
+                        "description": "is a read-only integer that contains the length of the data. The value is configured by setting the Point Type ID",
+                        "type": "integer"
+                    },
+                    "DataType": {
+                        "description": "is a read-only enumeration that contains the data type of the point. Typically this enumeration is not used. The data type of the point is set by setting the Point Type ID",
+                        "$ref": "#/components/schemas/CimPointTypesEnum"
+                    },
+                    "DeadBand": {
+                        "description": "is a variant with a string representation of 10 characters or less. Larger values will be rejected. Enter a value defining the tolerance for alarm conditions in this field. The deadband cushions the generation of alarms when a point value fluctuates at an alarm limit. Defaults to the empty string for new points. To remove the deadband set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "DerivedPoint": {
+                        "description": "returns an object that can be used for setting the Derived Point information. Only valid when the points type is Global or Derived",
+                        "$ref": "#/components/schemas/CimDerivedPoint"
+                    },
+                    "Description": {
+                        "description": "is a mixed case string of 40 characters or less. Longer strings will be automatically truncated. Descriptions also appear as the tool-tip for the point when browsing or configuring points. Defaults to the empty string when creating a new point.",
+                        "type": "string"
+                    },
+                    "DevicePoint": {
+                        "description": "returns an object that can be used for setting the Device Point information. Only valid when the point is a device point.",
+                        "$ref": "#/components/schemas/CimDevicePoint"
+                    },
+					"DisplayFormat": {
+                        "description": "returns an object that can be used for setting display format of the cimplicity point.",
+                        "$ref" : "#/components/schemas/CimDisplayFormat" 
+                    },
+                    "DisplayLimitHigh": {
+                        "description": "is a variant with a string representation of 10 characters or less. Larger values will be rejected. Display limits can be used as the animation limits when graphically displaying a point. Defaults to the empty string when creating a new point. To remove a limit set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "DisplayLimitLow": {
+                        "description": "is a variant with a string representation of 10 characters or less. Larger values will be rejected. Display limits can be used as the animation limits when graphically displaying a point. Defaults to the empty string when creating a new point. To remove a limit set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "Elements": {
+                        "description": "is an integer containing the number of elements in the point. Defaults to 1 for new points",
+                        "type": "integer"
+                    },
+                    "EngineeringUnits": {
+                        "description": "returns an object that can be used for setting the Engineering Units for the point. Only valid when the point is a device point.",
+                        "$ref": "#/components/schemas/CimEngineeringUnits"
+                    },
+                    "EnterprisePoint": {
+                        "description": "is an boolean indicating if the point should be exported to an enterprise server. Defaults to False when creating a new point",
+                        "type": "boolean"
+                    },
+                    "EnumFields": {
+                        "description": "As an alternative to the EnumerationID all the fields used for this point may be provided, and an enumeration for this point will be generated",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CimPointEnumField"
+                        }
+                    },
+                    "EnumerationID": {
+                        "description": "is a string indicating the Point Enumeration to be used for the point. Defaults to the empty string when creating a new point.",
+                        "type": "string"
+                    },
+                    "EuExists": {
+                        "description": "is a boolean indicating if the point uses EU Conversion. Setting this to False will remove EU Conversion for the point. Setting this to True will enable EU Conversion for the point. Defaults to False for a new point",
+                        "type": "boolean"
+                    },
+                    "Expressions": {
+                        "description": "is a list that contains the expressions for this dataitem",
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CimClassDataItemExpression"
+                        }
+                    },
+                    "Extra": {
+                        "description": "is an integer representing the extra data for the point. Defaults to 0 when creating a new point",
+                        "type": "integer"
+                    },
+                    "InvertAvailabilityTrigger": {
+                        "description": "is a boolean used to enable or disable availability trigger value inversion for a point. Defaults to FALSE for a new point",
+                        "type": "boolean"
+                    },
+                    "Level": {
+                        "description": "is an integer representing the level for the point. Defaults to 0 when creating a new point",
+                        "type": "integer"
+                    },
+                    "LogData": {
+                        "description": "is a boolean value indicating whether the point is logged through the database logger default logging option (DATA_LOG). To log the point to a table other than the default, use the CimTable methods. Defaults to the false when creating a new point",
+                        "type": "boolean"
+                    },
+                    "LogDataHistorian": {
+                        "description": "is a boolean value indicating whether the point is logged through Historian. Note The Historian OPC Interface option must be selected in the project properties. and the Historian client must be installed and configured. Defaults to the false when creating a new point",
+                        "type": "boolean"
+                    },
+                    "MeasurementUnitID": {
+                        "description": "is a string indicating the Measurement Unit ID to be used for conversion of the point. Defaults to the empty string when creating a new point",
+                        "type": "string"
+                    },
+                    "MeasurementUnit": {
+                        "description": "returns an object that represents the unit of measure associated with the value of the point",
+                        "$ref": "#/components/schemas/CimMeasurementUnit"
+                    },
+                    "OPCUA_NodeID": {
+                        "description": "is a read-only string containing the OPC UA NodeID for the point",
+                        "type": "string"
+                    },
+                    "PointAlarm": {
+                        "description": "returns an object that can be used for setting the Point Alarm information. New points default to not having an alarm",
+                        "$ref": "#/components/schemas/CimPointAlarm"
+                    },
+                    "PointID": {
+                        "description": "is a string that contains the name of the point. Point ID's are truncated to 256 characters. Since this is the default property of the object, you can omit it when assigning or using it.",
+                        "type": "string"
+                    },
+                    "PointState": {
+                        "description": "is a boolean used to enable or disable a point. When a point is disabled it is not collected from the device and is unavailable. The point is enabled when its point state is True, disabled when its point state is False. Defaults to True for new points",
+                        "type": "boolean"
+                    },
+                    "PointTypeID": {
+                        "description": "is a string containing the Point Type of the Point. Any of the point types that are available in configuration can be used here such as UINT, USINT, INT, SINT, STRING_20, etc. Must be specified when creating a new point",
+                        "type": "string"
+                    },
+                    "Published": {
+                        "description": "is a boolean used to enable or disable publishing to SOA for a point. Defaults to FALSE for a new point",
+                        "type": "boolean"
+                    },
+                    "RangeLimitHigh": {
+                        "description": "is a variant with a string representation of 10 characters or less. Larger values will be rejected. Values below the low range limit and above the high range limit will cause the point to be unavailable. Defaults to the empty string when creating a new point. To remove a limit set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "RangeLimitLow": {
+                        "description": "is a variant with a string representation of 10 characters or less. Larger values will be rejected. Values below the low range limit and above the high range limit will cause the point to be unavailable. Defaults to the empty string when creating a new point. To remove a limit set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "ReadOnly": {
+                        "description": "is an boolean indicating if the point is read-only. Defaults to False for new points",
+                        "type": "boolean"
+                    },
+                    "ResourceID": {
+                        "description": "is a string containing the Factory Resource associated with the point. Must be specified when creating a new point",
+                        "type": "string"
+                    },
+                    "SafetyPointID": {
+                        "description": "is an string containing the name of the safety point. The status of a safety point controls whether or not a setpoint is permitted. If the value of the safety point is non-zero and available a setpoint will be permitted. Defaults to the empty string when creating a new point.",
+                        "type": "string"
+                    },
+                    "ScreenID": {
+                        "description": "is a string indicating the CimView screen to be associated with the point. Defaults to the empty string when creating a new point",
+                        "type": "string"
+                    },
+                    "SetpointLimitHigh": {
+                        "description": "is a variant representing the upper limit for a value when performing a setpoint action with a string representation of 10 characters or less. Larger values will be rejected. Defaults to the empty string when creating a new point. To remove a limit set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "SetpointLimitLow": {
+                        "description": "is a variant representing the lower limit for a value when performing a setpoint action with a string representation of 10 characters or less. Larger values will be rejected. Defaults to the empty string when creating a new point. To remove a limit set it to an empty string (e.g. \"\".)",
+                        "type": "string"
+                    },
+                    "TrendBuffering": {
+                        "description": "returns an object that can be used for setting the Trend Buffering information",
+                        "$ref": "#/components/schemas/CimTrendPtBuffer"
+                    },
+                    "TriggerCheckPointID": {
+                        "description": "is an string containing the name of the availability trigger for the point. When the availability trigger is non-zero and available the point will be available, otherwise the point is unavailable. Defaults to the empty string when creating a new point",
+                        "type": "string"
+                    },
+                    "TriggerPointID": {
+                        "description": "is a string indicating the name of the trigger point. Trigger points are valid only for device points and some derived points. When configured for a device point, the trigger point must be on the same device as the point you are defining. Defaults to the empty string when creating a new point",
+                        "type": "string"
+                    },
+                    "Type": {
+                        "description": "is an enumeration representing the type of the point. Points can be Device Points, Global Points, etc. Must be specified when creating a new point",
+                        "$ref": "#/components/schemas/CimPointOriginEnum"
+                    },
+                    "changeapproval": {
+                        "description": "is used to configure changeapproval information of the point using changeapproval enumeration that contains the various change approval settings of the point.change approval is set to the point by setting",
+                        "$ref": "#/components/schemas/CimChangeapprovalEnum"
+                    }
+                }
+            },
+            "CimDerivedPoint": {
+                "type": "object",
+                "description": "Contains the properties pertaining to Derived Point Configuration",
+                "properties": {
+                    "CalculationType": {
+                        "description": "Gets and sets the type of calculation to be performed by the point.",
+                        "$ref": "#/components/schemas/CimPointCalcTypesEnum"
+                    },
+                    "InitState": {
+                        "description": "Gets and sets the flag for the initial state of the point value",
+                        "$ref": "#/components/schemas/CimDpInitStateEnum"
+                    },
+                    "InitValue": {
+                        "description": "is string containing the initial value for the point.",
+                        "type": "string"
+                    },
+                    "Local": {
+                        "description": "is boolean indicating if the point is local. Local points can be used to hold intermediate values of expressions. The value of local points are not available to applications, they are only used internally by the derived point process to perform calculations.",
+                        "type": "boolean"
+                    },
+                    "PointExpression": {
+                        "description": "is string containing the expression for the point.",
+                        "type": "string"
+                    },
+                    "PointSetInterval": {
+                        "description": "is string containing the interval to update the timer counter point. The format is HH:MM:SS using a 24 hour clock.",
+                        "type": "string"
+                    },
+                    "PointSetTime": {
+                        "description": "is string containing the start time for the timer counter point. The format is HH:MM:SS using a 24 hour clock",
+                        "type": "string"
+                    },
+                    "ProcessID": {
+                        "description": "is a string specifying the derived point process supporting this point. Normally this will be 'SPM' or '<node_id>_PTDP_RP'. This must identify a valid derived point processor process ID. It should not be changed unless you are using structure point processing",
+                        "type": "string"
+                    },
+                    "ResetPointID": {
+                        "description": "is a string containing the name of the reset point.",
+                        "type": "string"
+                    },
+                    "RolloverVal": {
+                        "description": "is a long integer defining the roll over value for delta accumulator function.",
+                        "type": "integer"
+                    },
+                    "VarianceValue": {
+                        "description": "is long integer defining the maximum variance value to be used for delta accumulator functions.",
+                        "type": "integer"
+                    }
+                }
+            },
+            "CimDevicePoint": {
+                "description": "object contains the device information for a CIMPLICITY point.",
+                "type": "object",
+                "properties": {
+                    "Address": {
+                        "description": "is a string indicating the device specific address of the point",
+                        "type": "string"
+                    },
+                    "AddressOffset": {
+                        "description": "is an integer indicating the address offset of the point. Typically used for addressing a boolean point in an analog domain",
+                        "type": "integer"
+                    },
+                    "AddressType": {
+                        "description": "is an enumeration indicating the addressing type of the point for MMS Ethernet devices. The valid enumerations are cimMMSVariableName and cimMMSFullyQualified",
+                        "$ref": "#/components/schemas/CimMMSAddressTypeEnum"
+                    },
+                    "AnalogDeadband": {
+                        "description": "is an variant containing the analog deadband for the point. The point will not be updated until a change that exceeds the deadband is read.",
+                        "type": "string"
+                    },
+                    "DelayLoad": {
+                        "description": "is boolean indicating the point should only be loaded into memory if it's requested by an application. Defaults to False.",
+                        "type": "boolean"
+                    },
+                    "DeviceID": {
+                        "description": "is a string indicating the device the point is on",
+                        "type": "string"
+                    },
+                    "JustInTime": {
+                        "description": "is a boolean used to enable or disable Just-In-Time. Note this is only available when this is a class Data Item coming from the Class configuration",
+                        "type": "boolean"
+                    },
+                    "PollAfterSetpoint": {
+                        "description": "is boolean indicating if the point should be polled immediately after a setpoint. If False, the point is not polled until the next scheduled scan cycle",
+                        "type": "boolean"
+                    },
+                    "ScanRate": {
+                        "description": "is an integer indicating the scan rate of the point in multiples of the base scan rate of the communications port.",
+                        "type": "integer"
+                    },
+                    "TriggerType": {
+                        "description": "is an enumeration indicating what type of triggering should be used to update the point. When using triggering a trigger point and a trigger value are also specified. Defaults to cimNoTrigger",
+                        "$ref": "#/components/schemas/CimDeviceTriggerEnum"
+                    },
+                    "TriggerValue": {
+                        "description": "is variant containing the trigger value. Trigger value is used when specifying a CimDevicePoint.TriggerType relation that requires a value",
+                        "type": "string"
+                    },
+                    "UpdateCriteria": {
+                        "description": "is an enumeration containing the criteria for updating the point",
+                        "$ref": "#/components/schemas/CimUpdateCriteriaEnum"
+                    }
+                }
+            },
+            "CimEngineeringUnits": {
+                "description": "object contains the conversion information for converting a point from raw device units to real-world units. Conversion can either be linear or based on a conversion expression",
+                "type": "object",
+                "properties": {
+                    "EuExpression": {
+                        "description": "is a string containing the equation used to convert the value from device units to engineering units. To use a custom expression you must first disable the linear conversion for the object. If the point is not read-only a reverse expression must be specified to allow a setpoint in engineering units to be translated back to device units. It is your responsibility to make sure these expressions yield the correct results",
+                        "type": "string"
+                    },
+                    "EuLabel": {
+                        "description": "is a string containing the EuLabel. Note you cannot specify an EuLabel if using a measurement unit for the point",
+                        "type": "string"
+                    },
+                    "EuRevExp": {
+                        "description": "is a string containing the equation used to convert the value from engineering units to device units. To use a custom expression you must first disable the linear conversion for the object. A forward expression must also be specified. It is your responsibility to make sure these expressions yield the correct results",
+                        "type": "string"
+                    },
+                    "HighConvValue": {
+                        "description": "is a variant containing the high converted value used for linear conversion with a string representation of 10 characters or less. Larger values will be rejected. To use linear conversion you must set linear conversion to True",
+                        "type": "string"
+                    },
+                    "HighRawValue": {
+                        "description": "is a variant containing the upper raw value used for linear conversion with a string representation of 10 characters or less. Larger values will be rejected. To use linear conversion you must set linear conversion to True",
+                        "type": "string"
+                    },
+                    "LinearConversion": {
+                        "description": "is a boolean indicating if the conversion is linear or custom",
+                        "type": "boolean"
+                    },
+                    "LowConvValue": {
+                        "description": "is a variant containing the low converted value used for linear conversion with a string representation of 10 characters or less. Larger values will be rejected. To use linear conversion you must set linear conversion to True.",
+                        "type": "string"
+                    },
+                    "LowRawValue": {
+                        "description": "is a variant containing the low raw value used for linear conversion with a string representation of 10 characters or less. Larger values will be rejected. To use linear conversion you must set linear conversion to True.",
+                        "type": "string"
+                    }
+                }
+            },
+            "CimClassDataItemExpression": {
+                "description": "is a object to configure the expression attributes",
+                "type": "object",
+                "properties": {
+                    "FirstOperandNum": {
+                        "description": "is number that hlds the first (or left hand) side of the operand if the value is to be treated as a number. Use CimClassDataItemExpression.FirstOperandString if your value is a string",
+                        "type": "number"
+                    },
+                    "FirstOperandString": {
+                        "description": "is string that hlds the first (or left) hand side of the operand. Use CimClassDataItemExpression.FirstOperandNum if your value is a number",
+                        "type": "string"
+                    },
+                    "ID": {
+                        "description": "is a read only attribute that represents the ID of this expression",
+                        "type": "string"
+                    },
+                    "Operator": {
+                        "description": "the operand that will be used to evaluate each side of this expression.",
+                        "$ref": "#/components/schemas/CimExpressionOperandTypesEnum"
+                    },
+                    "SecondOperandNum": {
+                        "description": "is number that hlds the first (or left) hand side of the operand if the value is to be treated as a number. Use CimClassDataItemExpression.SecondOperandString if your value is a string",
+                        "type": "number"
+                    },
+                    "SecondOperandString": {
+                        "description": "is string that hlds the second (or right hand) side of the operand. Use CimClassDataItemExpression.SecondOperandNum if your value is a number",
+                        "type": "string"
+                    }
+                }
+            },
+            "CimMeasurementUnit": {
+                "description": "Represents measurement unit.",
+                "type": "object",
+                "properties": {
+                    "UnitId": {
+                        "description": "The string identifier of the measurement unit.",
+                        "type": "string"
+                    },
+                    "Description": {
+                        "description": "Contains informative information about the measurement unit.",
+                        "type": "string"
+                    },
+                    "FullName": {
+                        "description": "Contains the full name of the measurement unit such as ”hour” or ”meter per second”.",
+                        "type": "string"
+                    },
+                    "DisplayLabel": {
+                        "description": "The display label of the measurement unit is typically the abbreviation of the measurement unit, for example ”h” for hour or ”m/s” for meter per second.",
+                        "type": "string"
+                    },
+                    "NamespaceUri": {
+                        "description": "Identifies the organization (company, standards organization) that defines the measurement unit.",
+                        "type": "string"
+                    },
+                    "NumericUnitId": {
+                        "description": "Numeric identifier for programmatic evaluation. -1 is used if a unitId is not available.",
+                        "type": "integer"
+                    }
+                }
+            },
+            "CimPointEnum": {
+                "description": "Represents a point enum that contains a list of point enum fields.",
+                "type": "object",
+                "properties": {
+                    "EnumID": {
+                        "description": "The identifier of the point enum.",
+                        "type": "string"
+                    },
+                    "Fields": {
+                        "description": "The list of fields for this enum.",
+                        "items": {
+                            "$ref": "#/components/schemas/CimPointEnumField"
+                        }
+                    }
+                }
+            },
+			"CimDisplayFormat" : {
+                "description": "object contains the display format information of a cimplicity point",
+                "type": "object",
+                "properties" : {
+                    "FormatSpecifier": {
+                            "description": "is a string used to specify the display format for the point. DisplayFormat uses the \"C\" language format specifiers",
+                            "type": "string",
+                            "minLength": 0,
+                            "maxLength": 10
+                        },
+                        "Justification": {
+                            "description": "An enumeration indicating the justification type of the display format.",
+                            "$ref": "#/components/schemas/CimJustificationEnum"
+                        },
+                        "Width": {
+                            "description": "A string that holds the value of the width in the display format",
+                            "type": "string"
+                        },
+                        "Precision": {
+                            "description": "A string that holds the value of the precision in the display format. Precision is always less than width and only for float values precision is enabled.",
+                            "type": "string"
+                        },
+                        "Type": {
+                            "description": "An enumeration indicating the format type of the display format. Only for float values format Type is enabled.",
+                            "$ref": "#/components/schemas/CimFormatTypeEnum"
+                        }
+                }
+            },
+            "CimPointEnumField": {
+                "description": "Represents a point enum field that associates a text string with an integer point value.",
+                "type": "object",
+                "properties": {
+                    "Text": {
+                        "description": "The Text property gets and sets the text of the point enum field.",
+                        "type": "string"
+                    },
+                    "Value": {
+                        "description": "The numeric value of the point enum field.",
+                        "type": "integer"
+                    },
+                    "SetpointAllowed": {
+                        "description": "The SetpointAllowed property gets and sets if a setpoint is allowed with this enum text for the point.",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "CimPointAlarm": {
+                "description": "object contains the point alarm information for a CIMPLICITY point",
+                "type": "object",
+                "properties": {
+                    "Alarm": {
+                        "description": "returns a CimAlarm object containing the non-point related properties of a CIMPLICITY alarm",
+                        "$ref": "#/components/schemas/CimAlarm"
+                    },
+                    "AlarmConfigured": {
+                        "description": "is a boolean indicating if alarming is configured for the point",
+                        "type": "boolean"
+                    },
+                    "AlarmCriteria": {
+                        "description": "is an enumeration indicating the type of alarming to be performed on the point. Defaults to cimAlarmAbs (absolute alarming.)",
+                        "$ref": "#/components/schemas/CimPointAlarmEnum"
+                    },
+                    "AlarmDelay": {
+                        "description": "is a boolean indicating if the alarm generation should be delayed. When alarm delay is enabled specify the TimeInterval and TimeUnit for the delay. AlarmDelay cannot be used with a Rate of Change alarm criteria",
+                        "type": "boolean"
+                    },
+                    "AlarmHigh": {
+                        "description": "contains a variant indicating the alarm high limit for the point",
+                        "type": "string"
+                    },
+                    "AlarmLow": {
+                        "description": "contains a variant indicating the alarm low limit for the point",
+                        "type": "string"
+                    },
+                    "AlarmMessage": {
+                        "description": "is a string containing the point alarm message to be used when an alarm is generated for the point",
+                        "type": "string"
+                    },
+                    "AlarmOffDelay": {
+                        "description": "is a boolean indicating if the moving alarm to normal state should be delayed. When alarm off delay is enabled specify the TimeInterval and TimeUnit for the delay. AlarmOffDelay cannot be used with a Rate of Change alarm criteria",
+                        "type": "boolean"
+                    },
+                    "AlarmStrID": {
+                        "description": "is a integer containing the Alarm String to use when generating point alarms. Defaults to 1",
+                        "type": "integer"
+                    },
+                    "AlarmValueUpdate": {
+                        "description": "is a boolean indicating if the %VAL field in the alarm message should be updated while the point is in ana alarm state",
+                        "type": "boolean"
+                    },
+                    "DeviationPtID": {
+                        "description": "is a string containing the name of the deviation point. The deviation point must be specified when the alarm criteria is cimAlarmDeviation",
+                        "type": "string"
+                    },
+                    "HiDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes into the Warning High state",
+                        "type": "string"
+                    },
+                    "HiDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm delay and alarm is in the Warning High state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "HiHiDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes into the Alarm High state",
+                        "type": "string"
+                    },
+                    "HiHiDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm delay and alarm is in the Alarm High state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "HiHiOffDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes from the Alarm High state to Normal state",
+                        "type": "string"
+                    },
+                    "HiHiOffDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm off delay and alarm is in the Alarm High state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "HiOffDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes from the Warning High state to Normal state",
+                        "type": "string"
+                    },
+                    "HiOffDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm off delay and alarm is in the Warning High state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "LoDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes into the Warning Low state",
+                        "type": "string"
+                    },
+                    "LoDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm delay and alarm is in the Warning Low state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "LoLoDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes into the Alarm Low state",
+                        "type": "string"
+                    },
+                    "LoLoDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm delay and alarm is in the Alarm Low state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "LoLoOffDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes from the Alarm Low state to Normal State",
+                        "type": "string"
+                    },
+                    "LoLoOffDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm off delay and alarm is in the Alarm Low state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "LoOffDelayInterval": {
+                        "description": "is a variant containing a numeric value indicating the delay interval when alarm goes from the Warning Low state to Normal state",
+                        "type": "string"
+                    },
+                    "LoOffDelayUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm off delay and alarm is in the Warning Low state",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "TimeInterval": {
+                        "description": "is a variant containing a numeric value indicating the time interval when using a rate of change or alarm delay",
+                        "type": "string"
+                    },
+                    "TimeUnit": {
+                        "description": "is an enumeration indicating the unit (hour, minute, second) of the time interval when using an alarm criteria of rate of change or using alarm delay",
+                        "$ref": "#/components/schemas/CimTimeUnitEnum"
+                    },
+                    "WarningHigh": {
+                        "description": "contains a variant indicating the warning high limit for the point",
+                        "type": "string"
+                    },
+                    "WarningLow": {
+                        "description": "contains a variant indicating the warning low limit for the point",
+                        "type": "string"
+                    },
+					"AlarmCustomAttributes": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ID": {
+                                    "description": "contains a enum which is the ID of this attribute",
+                                    "$ref": "#/components/schemas/CimPointAlarmCustomAttributeEnum"
+                                },
+                                "Value": {
+                                    "description": "contains a string which has the value of expression for this attribute",
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "maxLength": 512
+                                },
+                                "description": {
+                                    "description": "contains a string which describes the expression in this attribute",
+                                    "type": "string",
+                                    "minLength": 0,
+                                    "maxLength": 40
+                                }
+                            }
+                        }
+					}
+                }
+            },
+            "CimAlarm": {
+                "description": "object provides an interface to CIMPLICITY Alarm configuration",
+                "type": "object",
+                "properties": {
+                    "AckTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm acknowledgement should happen. Valid values are -1 - Immediate Acknowledgement 0 - No Automatic Acknowledgement (default) >0 - Number of minutes to wait before automatically acknowledging alarm",
+                        "type": "integer"
+                    },
+                    "AlarmClass": {
+                        "description": "is a string containing the class of the alarm",
+                        "type": "string"
+                    },
+                    "AlarmDescription": {
+                        "description": "is a string containing the description of the alarm, This attribute shall be ignored in case of point alarm",
+                        "type": "string"
+                    },
+                    "AlarmID": {
+                        "description": "is a string containing the Alarm ID. When accessed from a Point Alarm, this property is read-only because the Alarm ID is the same as the Point ID",
+                        "type": "string"
+                    },
+                    "AlarmMessage": {
+                        "description": "is a string containing the alarm message. Note When accessed from a Point Alarm, this property is read-only because the structure of the point alarm message defines the alarm message",
+                        "type": "string"
+                    },
+                    "AlarmTypeID": {
+                        "description": "is a string containing the alarm type id of the alarm. When accessed from a Point Alarm, this property is read-only because the structure of the point alarm message defines the Alarm Type Id",
+                        "type": "string"
+                    },
+                    "Changeapproval": {
+                        "description": "is used to configure changeapproval information of the alarm using the CimChangeapprovalEnum enumeration",
+                        "$ref": "#/components/schemas/CimChangeapprovalEnum"
+                    },
+                    "DeleteOpt": {
+                        "description": "is an enumeration the defines when the alarm will be automatically deleted.",
+                        "$ref": "#/components/schemas/CimAlarmDelOptEnum"
+                    },
+                    "HelpFileName": {
+                        "description": "is a string containing the name of the alarm help file. The string must be prefixed with AM_HELP:\\ in order for the file to be found by the alarm viewer and must have the extension HLP.",
+                        "type": "string"
+                    },
+                    "HiAckTimeout": {
+                        "description": "The CimAlarm.HiAckTimeout is a long integer that indicates when automatic alarm acknowledgement should happen while the alarm in the Warning High state. Valid values are -1 - Immediate Acknowledgement 0 - No Automatic Acknowledgement (default) >0 - Number of minutes to wait before automatically acknowledging alarm",
+                        "type": "integer"
+                    },
+                    "HiDeleteOpt": {
+                        "description": "is an enumeration the defines when the alarm will be automatically deleted from the Warning High state",
+                        "$ref": "#/components/schemas/CimAlarmDelOptEnum"
+                    },
+                    "HiHiAckTimeout": {
+                        "description": "The CimAlarm.HiHiAckTimeout is a long integer that indicates when automatic alarm acknowledgement should happen while the alarm in the Alarm High state. Valid values are -1 - Immediate Acknowledgement 0 - No Automatic Acknowledgement (default) >0 - Number of minutes to wait before automatically acknowledging alarm",
+                        "type": "integer"
+                    },
+                    "HiHiDeleteOpt": {
+                        "description": "is an enumeration the defines when the alarm will be automatically deleted from the Alarm High state",
+                        "$ref": "#/components/schemas/CimAlarmDelOptEnum"
+                    },
+                    "HiHiLogOpt": {
+                        "description": "The CimAlarm.HiHiLogOpt is a string that indicates what the alarm transitions in the Alarm High state should be logged. Valid characters are A - Log when acknowledged R - Log when reset D - Log when deleted G - Log when generated",
+                        "type": "string"
+                    },
+                    "HiHiRepeatTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm repeat should occur while the alarm is in the Alarm High state. 0 - No Automatic Repeat (default) >0 - Number of minutes to wait before automatically repeating alarm",
+                        "type": "integer"
+                    },
+                    "HiHiResetAllowed": {
+                        "description": "is a boolean that indicates if the alarm can be manually reset when it is in the Alarm High state",
+                        "type": "boolean"
+                    },
+                    "HiHiResetTimeout": {
+                        "description": "The CimAlarm.HiHiResetTimeout is a long integer that indicates when automatic alarm reset should happen while the alarm in the Alarm High state. Valid values are -1 - Immediate reset 0 - No Automatic reset (default) >0 - Number of minutes to wait before automatically resetting alarm",
+                        "type": "integer"
+                    },
+                    "HiLogOpt": {
+                        "description": "The CimAlarm.HiLogOpt is a string that indicates what the alarm transitions in the Warning High state should be logged. Valid characters are A - Log when acknowledged R - Log when reset D - Log when deleted G - Log when generated",
+                        "type": "string"
+                    },
+                    "HiRepeatTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm repeat should occur while the alarm is in the Warning High state. 0 - No Automatic Repeat (default) >0 - Number of minutes to wait before automatically repeating alarm",
+                        "type": "integer"
+                    },
+                    "HiResetAllowed": {
+                        "description": "is a boolean that indicates if the alarm can be manually reset when it is in the Warning High state",
+                        "type": "boolean"
+                    },
+                    "HiResetTimeout": {
+                        "description": "The CimAlarm.HiResetTimeout is a long integer that indicates when automatic alarm reset should happen while the alarm in the Warning High state. Valid values are -1 - Immediate reset 0 - No Automatic reset (default) >0 - Number of minutes to wait before automatically resetting alarm",
+                        "type": "integer"
+                    },
+                    "LoAckTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm acknowledgement should happen while the alarm in the Warning Low state. Valid values are -1 - Immediate Acknowledgement 0 - No Automatic Acknowledgement (default) >0 - Number of minutes to wait before automatically acknowledging alarm.",
+                        "type": "integer"
+                    },
+                    "LoDeleteOpt": {
+                        "description": "is an enumeration the defines when the alarm will be automatically deleted from the Warning Low state",
+                        "$ref": "#/components/schemas/CimAlarmDelOptEnum"
+                    },
+                    "LoLoAckTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm acknowledgement should happen while the alarm in the Alarm Low state. Valid values are -1 - Immediate Acknowledgement 0 - No Automatic Acknowledgement (default) >0 - Number of minutes to wait before automatically acknowledging alarm",
+                        "type": "integer"
+                    },
+                    "LoLoDeleteOpt": {
+                        "description": "is an enumeration the defines when the alarm will be automatically deleted from the Alarm Low state",
+                        "$ref": "#/components/schemas/CimAlarmDelOptEnum"
+                    },
+                    "LoLoLogOpt": {
+                        "description": "is a string that indicates what the alarm transitions in the Alarm Low state should be logged. Valid characters are A - Log when acknowledged R - Log when reset D - Log when deleted G - Log when generated",
+                        "type": "string"
+                    },
+                    "LoLoRepeatTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm repeat should occur while the alarm is in the Alarm Low state. 0 - No Automatic Repeat (default) >0 - Number of minutes to wait before automatically repeating alarm",
+                        "type": "integer"
+                    },
+                    "LoLoResetAllowed": {
+                        "description": "is a boolean that indicates if the alarm can be manually reset when it is in the Alarm Low state",
+                        "type": "boolean"
+                    },
+                    "LoLoResetTimeout": {
+                        "description": "The CimAlarm.LoLoResetTimeout is a long integer that indicates when automatic alarm reset should happen while the alarm in the Alarm Low state. Valid values are -1 - Immediate reset 0 - No Automatic reset (default) >0 - Number of minutes to wait before automatically resetting alarm",
+                        "type": "integer"
+                    },
+                    "LoLogOpt": {
+                        "description": "The CimAlarm.LoLogOpt is a string that indicates what the alarm transitions in the Warning Low state should be logged. Valid characters are A - Log when acknowledged R - Log when reset D - Log when deleted G - Log when generated",
+                        "type": "string"
+                    },
+                    "LoRepeatTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm repeat should occur while the alarm is in the Warning Low state. 0 - No Automatic Repeat (default) >0 - Number of minutes to wait before automatically repeating alarm",
+                        "type": "integer"
+                    },
+                    "LoResetAllowed": {
+                        "description": "is a boolean that indicates if the alarm can be manually reset when it is in the Warning Low state",
+                        "type": "boolean"
+                    },
+                    "LoResetTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm reset should happen while the alarm in the Warning Low state. Valid values are -1 - Immediate reset 0 - No Automatic reset (default) >0 - Number of minutes to wait before automatically resetting alarm",
+                        "type": "integer"
+                    },
+                    "LogOpt": {
+                        "description": "The CimAlarm.LogOpt is a string that indicates when the alarm should be logged. Valid characters are A - Log when acknowledged R - Log when reset D - Log when deleted G - Log when generated",
+                        "type": "string"
+                    },
+                    "MaxStacked": {
+                        "description": "is a long integer that indicates how many alarms to stack. Defaults to zero if not specified. Maximum value is 20",
+                        "type": "integer"
+                    },
+                    "Published": {
+                        "description": "is a boolean used to enable or disable publishing to SOA for an alarm. Defaults to FALSE for a new alarm",
+                        "type": "boolean"
+                    },
+                    "RepeatTimeout": {
+                        "description": "is a long integer that indicates when automatic alarm repeat should occur 0 - No Automatic Repeat (default) >0 - Number of minutes to wait before automatically repeating alarm",
+                        "type": "integer"
+                    },
+                    "ResetAllowed": {
+                        "description": "is a boolean that indicates if the alarm can be manually reset",
+                        "type": "boolean"
+                    },
+                    "ResetTimeout": {
+                        "description": "The CimAlarm.ResetTimeout is a long integer that indicates when automatic alarm reset should happen. Valid values are -1 - Immediate reset 0 - No Automatic reset (default) >0 - Number of minutes to wait before automatically resetting alarm",
+                        "type": "integer"
+                    },
+                    "Routing": {
+                        "description": "returns an object containing the alarm routing for the alarm",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "Severity": {
+                        "description": "is a short that indicates the alarm severity",
+                        "type": "integer"
+                    }
+                }
+            },
+            "CimTrendPtBuffer": {
+                "description": "object contains the trend point buffering information for a CIMPLICITY point",
+                "type": "object",
+                "properties": {
+                    "Duration": {
+                        "description": "is a long integer containing maximum age in seconds of a sample to keep",
+                        "type": "integer"
+                    },
+                    "MaxBuffered": {
+                        "description": "is a long integer containing the maximum number of samples to keep",
+                        "type": "integer"
+                    }
+                }
+            },
+			"CimJustificationEnum": {
+                "type": "string",
+                "enum": [
+					"",
+                    "cimLeft",
+                    "cimRight",
+                    "cimZero"
+                ]
+            },
+            "CimFormatTypeEnum": {
+                "type": "string",
+                "enum": [
+					"",
+                    "cimCompact",
+                    "cimScientific",
+                    "cimFixed"
+                ]
+            },
+            "CimPointTypesEnum": {
+                "type": "string",
+                "enum": [
+					"",
+                    "cimBoolean",
+                    "cimBitString",
+                    "cimOctectString",
+                    "cimString",
+                    "cimShort",
+                    "cimInteger",
+                    "cimLong",
+                    "cimUnsignedShort",
+                    "cimUnsignedInteger",
+                    "cimUnsignedLong",
+                    "cimReal",
+                    "cimInt64",
+                    "cimUnsignedInt64",
+                    "cimWString"
+                ]
+            },
+            "CimPointCalcTypesEnum": {
+                "description": "Specifies calculation types of points",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimExpression",
+                    "cimDeltaAccum",
+                    "cimValueAccum",
+                    "cimAverage",
+                    "cimMaxCapture",
+                    "cimMinCapture",
+                    "cimTransHiAccum",
+                    "cimExpressWrt",
+                    "cimTimerCounter",
+                    "cimHistogram"
+                ]
+            },
+            "CimDpInitStateEnum": {
+                "description": "Specifies initial value for a global or derived point.",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimUnavailable",
+                    "cimInitialized",
+                    "cimSaved",
+                    "cimSavedOrInit"
+                ]
+            },
+            "CimMMSAddressTypeEnum": {
+                "description": "MMS types",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimMMSVariableName",
+                    "cimMMSFullyQualified"
+                ]
+            },
+            "CimDeviceTriggerEnum": {
+                "description": "defines the trigger condition for a device point. See the Point Configuration documentation for additional information",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimNoTrigger",
+                    "cimTriggerOnchange",
+                    "cimTriggerEQ",
+                    "cimTriggerLT",
+                    "cimTriggerGT",
+                    "cimTriggerLE",
+                    "cimTriggerGE"
+                ]
+            },
+            "CimUpdateCriteriaEnum": {
+                "description": "defines update criteria available for device points. The particular types of update that are actually available depend on the device communication module being used",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimUnsolicited",
+                    "cimOnchange",
+                    "cimOnscan",
+                    "cimPollOnce",
+                    "cimOndemandOnScan",
+                    "cimOndemand",
+                    "cimUnsolicitedOnChange",
+                    "cimPollOnceOnchange",
+                    "cimOndemandUnsolicited",
+                    "cimOndemandPollOnce",
+                    "cimOndemandUnsolicitedOnChange",
+                    "cimOndemandPollOnceOnChange"
+                ]
+            },
+            "CimExpressionOperandTypesEnum": {
+                "description": "Specifies the browser type",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimExpressionPlus",
+                    "cimExpressionMinus",
+                    "cimExpressionMultiply",
+                    "cimExpressionDivide",
+                    "cimExpresssionNone",
+                    "cimExpressionGreaterThan",
+                    "cimExpressionLessThan",
+                    "cimExpressionEquals",
+                    "cimExpressionNotEquals"
+                ]
+            },
+            "CimChangeapprovalEnum": {
+                "description": "defines different change approval data setting. The numeric value of these enumerations can be used in an expression of a class data item for the $APPROVAL_TYPE field",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimPerform",
+                    "cimPerformverify",
+                    "cimChangeapprovalNone",
+                    "cimUnsigned",
+                    "cimUnsignedPerform",
+                    "cimUnsignedPerformVerify"
+                ]
+            },
+            "CimAlarmDelOptEnum": {
+                "description": "defines the deletion options available for an alarm",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimAcked",
+                    "cimReset",
+                    "cimAckedReset",
+                    "cimNoDeleteOption"
+                ]
+            },
+            "CimPointAlarmEnum": {
+                "description": "defines types of alarming available",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimAlarmAbs",
+                    "cimAlarmDeviation",
+                    "cimAlarmRateOfChange",
+                    "cimAlarmUpdate",
+                    "cimAlarmAbsEq"
+                ]
+            },
+            "CimPointOriginEnum": {
+                "description": "defines the origin types for a point",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimDevice",
+                    "cimGlobal",
+                    "cimDerived",
+                    "cimDeviceDiagnostic",
+                    "cimAlwaysPolled"
+                ]
+            },
+            "CimTimeUnitEnum": {
+                "description": "defines units for time values",
+                "type": "string",
+                "enum": [
+					"",
+                    "cimNone",
+                    "cimMillisecond",
+                    "cimTick",
+                    "cimSecond",
+                    "cimMinute",
+                    "cimHour",
+                    "cimDay"
+                ]
+            },
+			"CimPointAlarmCustomAttributeEnum": {
+                "description": "defines the attribute IDs for alarm custom attributes",
+                "type": "string",
+                "enum": [
+                    "Attribute1",
+                    "Attribute2",
+                    "Attribute3",
+                    "Attribute4",
+                    "Attribute5",
+                    "Attribute6",
+                    "Attribute7",
+                    "Attribute8",
+                    "Attribute9",
+                    "Attribute10"
+                ]
+            }
+        }
+    }
+}

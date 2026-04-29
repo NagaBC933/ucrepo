@@ -1,0 +1,179 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
+    "$id": "https://github.build.ge.com/DPM/em-central-repo/blob/convertWordToJson/masterSchemas/definitions/Type.V1.0.0.json",
+    "title": "Type Definition Schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "level": {
+            "type": "string",
+            "enum": [
+                "ASSET",
+                "SEGMENT",
+                "SITE",
+                "ENTERPRISE"
+            ]
+        },
+        "variables": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "dataType": {
+                        "type": "string",
+                        "enum": [
+                            "numeric",
+                            "string",
+                            "boolean"
+                        ]
+                    },
+                    "mandatory": {
+                        "type": "boolean",
+                        "description": "If the variable is mandatory, it should be included in all the templates. Else, the variable can be excluded in non-base templates."
+                    },
+                    "variableType": {
+                        "type": "string",
+                        "enum": [
+                            "static",
+                            "dynamic"
+                        ]
+                    },
+                    "euName": {
+                        "type": "string",
+                        "description": "Reference of the unit of measure."
+                    }
+                },
+                "required": [
+                    "name",
+                    "dataType",
+                    "mandatory",
+                    "variableType",
+                    "euName"
+                ]
+            }
+        },
+        "containments": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "alias": {
+                        "type": "string"
+                    },
+                    "containedType": {
+                        "type": "string"
+                    },
+                    "containedTemplate": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "mandatory": {
+                        "type": "boolean",
+                        "description": "If the containment is mandatory, it should be included in all the templates. Else, containment can be excluded in non-base templates."
+                    },
+                    "aliasSubParamValues": {
+                        "type": "array",
+                        "description": "List of Substitution Parameters and their values that belong to the contained Type, used for overriding default values specified in the Type's template.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "ID": {
+                                    "type": "string",
+                                    "description": "Substitution Parameter ID that is defined in the Type's template."
+                                },
+                                "Value": {
+                                    "type": "string",
+                                    "description": "Value of the Parameter specified as string."
+                                }
+                            },
+                            "required": ["ID","Value"]
+                        }
+                    }
+                },
+                "required": [
+                        "alias",
+                        "containedType",
+                        "containedTemplate",
+                        "mandatory",
+                        "description",
+                        "aliasSubParamValues"
+                    ]
+                }
+            
+        }, 
+        "substitutionParameters": {
+            "$ref": "#/definitions/SubstitutionParameters"
+          }
+        },
+        
+        "required": [
+            "name",
+            "variables",
+            "containments"
+        ],
+
+    "definitions": {
+    "SubstitutionParameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dataType": {
+            "type": "string",
+            "enum": ["numeric", "boolean", "string"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "defaultValue": {
+            "type": "string"
+          },
+          "instantiationType": {
+            "type": "string",
+            "enum": ["Hidden","Optional","Readonly","Required","Static","StaticDisplay"]
+          },
+          "reference": {
+            "type": "boolean"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "helpString": {
+            "type": "string"
+          },
+          "browserType": {
+            "type": "string",
+            "enum":["","ALARM_CLASS","DEVICE","MEASUNIT","POINT","PORT","RESOURCE","ROLE","USER"]
+          },
+          "order": {
+            "type": "number"
+          },
+          "propertyPage": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "dataType",
+          "defaultValue"
+        ]
+      }
+    }
+  }
+    }
