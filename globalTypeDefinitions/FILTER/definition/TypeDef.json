@@ -1,0 +1,33 @@
+{
+  "containments" : [],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "FILTER",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "bar",
+      "mandatory" : true,
+      "name" : "INLETPRESSURE",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "m3/h",
+      "mandatory" : true,
+      "name" : "OUTFLOW",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "bar",
+      "mandatory" : true,
+      "name" : "OUTLETPRESSURE",
+      "variableType" : "dynamic"
+    }
+  ]
+}
