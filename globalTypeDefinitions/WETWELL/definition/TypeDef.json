@@ -1,10 +1,10 @@
 {
-  "containments" : [],
+  "containments" : [ ],
   "description" : "Pump Station - Wet Well",
   "level" : "ASSET",
   "name" : "WETWELL",
-  "variables" : 
-  [
+  "subParameters" : [ ],
+  "variables" : [
     {
       "dataType" : "numeric",
       "description" : "",
