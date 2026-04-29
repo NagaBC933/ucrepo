@@ -1,23 +1,8 @@
 {
-  "containments" : 
-  [
+  "containments" : [
     {
       "alias" : "PUMPTRAIN",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}HydraulicSystem.PumpTrain."
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
       "containedType" : "PUMPTRAIN",
       "description" : "",
@@ -25,21 +10,7 @@
     },
     {
       "alias" : "WETWELL",
-      "aliasSubParamValues" : 
-      [
-        {
-          "ID" : "$DEVICE_ID",
-          "Value" : "{..\\$DEVICE_ID}"
-        },
-        {
-          "ID" : "$RESOURCE_ID",
-          "Value" : "{..\\$RESOURCE_ID}"
-        },
-        {
-          "ID" : "$ADDRESS",
-          "Value" : "{..\\$ADDRESS}HydraulicSystem.WetWell"
-        }
-      ],
+      "aliasSubParamValues" : [ ],
       "containedTemplate" : "Base",
       "containedType" : "WETWELL",
       "description" : "",
@@ -49,5 +20,6 @@
   "description" : "",
   "level" : "ASSET",
   "name" : "PUMPSTATION",
-  "variables" : []
+  "subParameters" : [ ],
+  "variables" : [ ]
 }

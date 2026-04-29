@@ -1,7 +1,6 @@
 {
-  "Actions" : [],
-  "Attributes" : 
-  [
+  "Actions" : [ ],
+  "Attributes" : [
     {
       "AttributeType" : "cimAttributeString",
       "BrowserType" : "",
@@ -101,15 +100,12 @@
   ],
   "ClassId" : "PUMPSTATION",
   "ClassVersion" : 1,
-  "CompositeMembers" : 
-  [
+  "CompositeMembers" : [
     {
       "ClassID" : "PUMPTRAIN",
-      "ClassMembers" : 
-      [
+      "ClassMembers" : [
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -125,11 +121,10 @@
           ],
           "ClassID" : "PUMPTRAIN",
           "ID" : "PUMPTRAIN",
-          "Routing" : []
+          "Routing" : [ ]
         },
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -145,11 +140,10 @@
           ],
           "ClassID" : "MOTOR",
           "ID" : "PUMPTRAIN.MOTOR1",
-          "Routing" : []
+          "Routing" : [ ]
         },
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -165,11 +159,10 @@
           ],
           "ClassID" : "MOTOR",
           "ID" : "PUMPTRAIN.MOTOR2",
-          "Routing" : []
+          "Routing" : [ ]
         },
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -185,11 +178,10 @@
           ],
           "ClassID" : "MOTOR",
           "ID" : "PUMPTRAIN.MOTOR3",
-          "Routing" : []
+          "Routing" : [ ]
         },
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -205,11 +197,10 @@
           ],
           "ClassID" : "PUMP",
           "ID" : "PUMPTRAIN.PUMP1",
-          "Routing" : []
+          "Routing" : [ ]
         },
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -225,11 +216,10 @@
           ],
           "ClassID" : "PUMP",
           "ID" : "PUMPTRAIN.PUMP2",
-          "Routing" : []
+          "Routing" : [ ]
         },
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -245,21 +235,19 @@
           ],
           "ClassID" : "PUMP",
           "ID" : "PUMPTRAIN.PUMP3",
-          "Routing" : []
+          "Routing" : [ ]
         }
       ],
       "Count" : 7,
       "Description" : "",
-      "Expressions" : [],
+      "Expressions" : [ ],
       "ID" : "PUMPTRAIN"
     },
     {
       "ClassID" : "WETWELL",
-      "ClassMembers" : 
-      [
+      "ClassMembers" : [
         {
-          "Attributes" : 
-          [
+          "Attributes" : [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -275,20 +263,20 @@
           ],
           "ClassID" : "WETWELL",
           "ID" : "WETWELL",
-          "Routing" : []
+          "Routing" : [ ]
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [],
+      "Expressions" : [ ],
       "ID" : "WETWELL"
     }
   ],
-  "DataItems" : [],
-  "DateTime" : "2026-04-29T14:21:24.1652255Z",
+  "DataItems" : [ ],
+  "DateTime" : "2026-04-29T14:05:38.6687482Z",
   "DefaultGraphic" : "PS_Group",
   "Description" : "",
-  "Events" : [],
+  "Events" : [ ],
   "FaceplateScreen" : "",
   "GraphicsFile" : "globalResources\\screens\\Demo_PS_Template.ctx",
   "HelpFile" : "",
@@ -296,5 +284,5 @@
   "PreCreateScript" : "",
   "PreDeleteScript" : "",
   "SchemaVersion" : "V1.0.0",
-  "Scripts" : []
+  "Scripts" : [ ]
 }
