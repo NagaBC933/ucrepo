@@ -1,7 +1,6 @@
 {
-  "Actions" : [],
-  "Attributes" : 
-  [
+  "Actions" : [ ],
+  "Attributes" : [
     {
       "AttributeType" : "cimAttributeString",
       "BrowserType" : "",
@@ -89,16 +88,14 @@
   ],
   "ClassId" : "MOTOR",
   "ClassVersion" : 1,
-  "CompositeMembers" : [],
-  "DataItems" : 
-  [
+  "CompositeMembers" : [ ],
+  "DataItems" : [
     {
       "AttributeSet" : "",
       "DataLen" : 0,
       "DataType" : "cimReal",
       "DeadBand" : "",
-      "DerivedPoint" : 
-      {
+      "DerivedPoint" : {
         "CalculationType" : "cimExpression",
         "InitState" : "cimUnavailable",
         "InitValue" : "",
@@ -112,8 +109,7 @@
         "VarianceValue" : 0
       },
       "Description" : "",
-      "DevicePoint" : 
-      {
+      "DevicePoint" : {
         "Address" : "{$ADDRESS}.Current",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
@@ -128,8 +124,7 @@
         "TriggerValue" : "",
         "UpdateCriteria" : "cimOnchange"
       },
-      "DisplayFormat" : 
-      {
+      "DisplayFormat" : {
         "FormatSpecifier" : "%-f",
         "Justification" : "cimLeft",
         "Precision" : "",
@@ -139,8 +134,7 @@
       "DisplayLimitHigh" : "",
       "DisplayLimitLow" : "",
       "Elements" : 1,
-      "EngineeringUnits" : 
-      {
+      "EngineeringUnits" : {
         "EuExpression" : "",
         "EuLabel" : "A",
         "EuRevExp" : "",
@@ -153,14 +147,13 @@
       "EnterprisePoint" : false,
       "EnumerationID" : "",
       "EuExists" : false,
-      "Expressions" : [],
+      "Expressions" : [ ],
       "Extra" : 0,
       "InvertAvailabilityTrigger" : false,
       "Level" : 0,
       "LogData" : false,
       "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
+      "MeasurementUnit" : {
         "Description" : "Current",
         "DisplayLabel" : "A",
         "FullName" : "",
@@ -169,10 +162,8 @@
         "UnitId" : "A"
       },
       "MeasurementUnitID" : "A",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
+      "PointAlarm" : {
+        "Alarm" : {
           "AckTimeout" : 0,
           "AlarmClass" : "",
           "AlarmDescription" : "",
@@ -211,14 +202,13 @@
           "RepeatTimeout" : 0,
           "ResetAllowed" : false,
           "ResetTimeout" : 0,
-          "Routing" : [],
+          "Routing" : [ ],
           "Severity" : 0,
           "changeapproval" : "cimChangeapprovalNone"
         },
         "AlarmConfigured" : false,
         "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
+        "AlarmCustomAttributes" : [
           {
             "Description" : "",
             "ID" : "Attribute1",
@@ -299,9 +289,8 @@
         "WarningHigh" : "",
         "WarningLow" : ""
       },
-      "PointEnum" : 
-      {
-        "Fields" : []
+      "PointEnum" : {
+        "Fields" : [ ]
       },
       "PointID" : "CURRENT",
       "PointState" : true,
@@ -315,8 +304,7 @@
       "ScreenID" : "",
       "SetpointLimitHigh" : "",
       "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
+      "TrendBuffering" : {
         "Duration" : 0,
         "MaxBuffered" : 0
       },
@@ -330,8 +318,7 @@
       "DataLen" : 0,
       "DataType" : "cimReal",
       "DeadBand" : "",
-      "DerivedPoint" : 
-      {
+      "DerivedPoint" : {
         "CalculationType" : "cimExpression",
         "InitState" : "cimUnavailable",
         "InitValue" : "",
@@ -345,8 +332,7 @@
         "VarianceValue" : 0
       },
       "Description" : "",
-      "DevicePoint" : 
-      {
+      "DevicePoint" : {
         "Address" : "{$ADDRESS}.Power",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
@@ -361,8 +347,7 @@
         "TriggerValue" : "",
         "UpdateCriteria" : "cimOnchange"
       },
-      "DisplayFormat" : 
-      {
+      "DisplayFormat" : {
         "FormatSpecifier" : "%-f",
         "Justification" : "cimLeft",
         "Precision" : "",
@@ -372,8 +357,7 @@
       "DisplayLimitHigh" : "",
       "DisplayLimitLow" : "",
       "Elements" : 1,
-      "EngineeringUnits" : 
-      {
+      "EngineeringUnits" : {
         "EuExpression" : "",
         "EuLabel" : "kW",
         "EuRevExp" : "",
@@ -386,14 +370,13 @@
       "EnterprisePoint" : false,
       "EnumerationID" : "",
       "EuExists" : false,
-      "Expressions" : [],
+      "Expressions" : [ ],
       "Extra" : 0,
       "InvertAvailabilityTrigger" : false,
       "Level" : 0,
       "LogData" : false,
       "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
+      "MeasurementUnit" : {
         "Description" : "Power",
         "DisplayLabel" : "kW",
         "FullName" : "",
@@ -402,10 +385,8 @@
         "UnitId" : "KW"
       },
       "MeasurementUnitID" : "KW",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
+      "PointAlarm" : {
+        "Alarm" : {
           "AckTimeout" : 0,
           "AlarmClass" : "",
           "AlarmDescription" : "",
@@ -444,14 +425,13 @@
           "RepeatTimeout" : 0,
           "ResetAllowed" : false,
           "ResetTimeout" : 0,
-          "Routing" : [],
+          "Routing" : [ ],
           "Severity" : 0,
           "changeapproval" : "cimChangeapprovalNone"
         },
         "AlarmConfigured" : false,
         "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
+        "AlarmCustomAttributes" : [
           {
             "Description" : "",
             "ID" : "Attribute1",
@@ -532,9 +512,8 @@
         "WarningHigh" : "",
         "WarningLow" : ""
       },
-      "PointEnum" : 
-      {
-        "Fields" : []
+      "PointEnum" : {
+        "Fields" : [ ]
       },
       "PointID" : "POWER",
       "PointState" : true,
@@ -548,8 +527,7 @@
       "ScreenID" : "",
       "SetpointLimitHigh" : "",
       "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
+      "TrendBuffering" : {
         "Duration" : 0,
         "MaxBuffered" : 0
       },
@@ -563,8 +541,7 @@
       "DataLen" : 0,
       "DataType" : "cimReal",
       "DeadBand" : "",
-      "DerivedPoint" : 
-      {
+      "DerivedPoint" : {
         "CalculationType" : "cimExpression",
         "InitState" : "cimUnavailable",
         "InitValue" : "",
@@ -578,8 +555,7 @@
         "VarianceValue" : 0
       },
       "Description" : "",
-      "DevicePoint" : 
-      {
+      "DevicePoint" : {
         "Address" : "{$ADDRESS}.Vibration",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
@@ -594,8 +570,7 @@
         "TriggerValue" : "",
         "UpdateCriteria" : "cimOnchange"
       },
-      "DisplayFormat" : 
-      {
+      "DisplayFormat" : {
         "FormatSpecifier" : "%-f",
         "Justification" : "cimLeft",
         "Precision" : "",
@@ -605,8 +580,7 @@
       "DisplayLimitHigh" : "",
       "DisplayLimitLow" : "",
       "Elements" : 1,
-      "EngineeringUnits" : 
-      {
+      "EngineeringUnits" : {
         "EuExpression" : "",
         "EuLabel" : "mm/s",
         "EuRevExp" : "",
@@ -619,14 +593,13 @@
       "EnterprisePoint" : false,
       "EnumerationID" : "",
       "EuExists" : false,
-      "Expressions" : [],
+      "Expressions" : [ ],
       "Extra" : 0,
       "InvertAvailabilityTrigger" : false,
       "Level" : 0,
       "LogData" : false,
       "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
+      "MeasurementUnit" : {
         "Description" : "Vibration",
         "DisplayLabel" : "mm/s",
         "FullName" : "",
@@ -635,10 +608,8 @@
         "UnitId" : "MM/S"
       },
       "MeasurementUnitID" : "MM/S",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
+      "PointAlarm" : {
+        "Alarm" : {
           "AckTimeout" : 0,
           "AlarmClass" : "",
           "AlarmDescription" : "",
@@ -677,14 +648,13 @@
           "RepeatTimeout" : 0,
           "ResetAllowed" : false,
           "ResetTimeout" : 0,
-          "Routing" : [],
+          "Routing" : [ ],
           "Severity" : 0,
           "changeapproval" : "cimChangeapprovalNone"
         },
         "AlarmConfigured" : false,
         "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
+        "AlarmCustomAttributes" : [
           {
             "Description" : "",
             "ID" : "Attribute1",
@@ -765,9 +735,8 @@
         "WarningHigh" : "",
         "WarningLow" : ""
       },
-      "PointEnum" : 
-      {
-        "Fields" : []
+      "PointEnum" : {
+        "Fields" : [ ]
       },
       "PointID" : "VIBRATION",
       "PointState" : true,
@@ -781,8 +750,7 @@
       "ScreenID" : "",
       "SetpointLimitHigh" : "",
       "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
+      "TrendBuffering" : {
         "Duration" : 0,
         "MaxBuffered" : 0
       },
@@ -792,10 +760,10 @@
       "changeapproval" : "cimChangeapprovalNone"
     }
   ],
-  "DateTime" : "2026-04-29T14:21:24.1432451Z",
+  "DateTime" : "2026-04-29T14:05:38.5157515Z",
   "DefaultGraphic" : "",
   "Description" : "Pump-driving motor - 3 electrical/mechanical ",
-  "Events" : [],
+  "Events" : [ ],
   "FaceplateScreen" : "",
   "GraphicsFile" : "",
   "HelpFile" : "",
@@ -803,5 +771,5 @@
   "PreCreateScript" : "",
   "PreDeleteScript" : "",
   "SchemaVersion" : "V1.0.0",
-  "Scripts" : []
+  "Scripts" : [ ]
 }
