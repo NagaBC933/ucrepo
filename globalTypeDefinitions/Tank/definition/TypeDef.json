@@ -1,0 +1,17 @@
+{
+  "containments" : [ ],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "Tank",
+  "subParameters" : [ ],
+  "variables" : [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "Height",
+      "variableType" : "dynamic"
+    }
+  ]
+}
