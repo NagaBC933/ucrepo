@@ -1,0 +1,33 @@
+{
+  "containments" : [],
+  "description" : "Pump-driving motor - 3 electrical/mechanical ",
+  "level" : "ASSET",
+  "name" : "MOTOR",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "A",
+      "mandatory" : true,
+      "name" : "CURRENT",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "kW",
+      "mandatory" : true,
+      "name" : "POWER",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "mm/s",
+      "mandatory" : true,
+      "name" : "VIBRATION",
+      "variableType" : "dynamic"
+    }
+  ]
+}

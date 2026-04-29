@@ -1,0 +1,17 @@
+{
+  "containments" : [],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "OUTLETPUMP",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "m3/h",
+      "mandatory" : true,
+      "name" : "PUMPFLOWRATE",
+      "variableType" : "dynamic"
+    }
+  ]
+}

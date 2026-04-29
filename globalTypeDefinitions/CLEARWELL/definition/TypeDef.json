@@ -1,0 +1,17 @@
+{
+  "containments" : [],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "CLEARWELL",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "%",
+      "mandatory" : true,
+      "name" : "LEVEL",
+      "variableType" : "dynamic"
+    }
+  ]
+}

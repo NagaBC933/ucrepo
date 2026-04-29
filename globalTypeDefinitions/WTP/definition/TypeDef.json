@@ -1,0 +1,173 @@
+{
+  "containments" : 
+  [
+    {
+      "alias" : "CHLORINATION",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}Treatment.ChlorinationSystem"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "CHLORINATION",
+      "description" : "",
+      "mandatory" : true
+    },
+    {
+      "alias" : "CLEARWELL",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}ClearWell"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "CLEARWELL",
+      "description" : "",
+      "mandatory" : true
+    },
+    {
+      "alias" : "DOSINGPUMP",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}Treatment.ChemicalDosingSystem.DosingPump"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "DOSINGPUMP",
+      "description" : "",
+      "mandatory" : true
+    },
+    {
+      "alias" : "FILTER",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}Filtration.Filter"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "FILTER",
+      "description" : "",
+      "mandatory" : true
+    },
+    {
+      "alias" : "FILTRATIONCONTROL",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}Treatment.FiltrationControlSystem"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "FILTRATIONCONTROL",
+      "description" : "",
+      "mandatory" : true
+    },
+    {
+      "alias" : "INTAKE",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}Intake"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "INTAKE",
+      "description" : "",
+      "mandatory" : true
+    },
+    {
+      "alias" : "OUTLETPUMP",
+      "aliasSubParamValues" : 
+      [
+        {
+          "ID" : "$DEVICE_ID",
+          "Value" : "{..\\$DEVICE_ID}"
+        },
+        {
+          "ID" : "$RESOURCE_ID",
+          "Value" : "{..\\$RESOURCE_ID}"
+        },
+        {
+          "ID" : "$ADDRESS",
+          "Value" : "{..\\$ADDRESS}"
+        }
+      ],
+      "containedTemplate" : "Base",
+      "containedType" : "OUTLETPUMP",
+      "description" : "",
+      "mandatory" : true
+    }
+  ],
+  "description" : "Water Treatment Plant",
+  "level" : "ASSET",
+  "name" : "WTP",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "m3/h",
+      "mandatory" : true,
+      "name" : "OUTFLOW",
+      "variableType" : "dynamic"
+    }
+  ]
+}

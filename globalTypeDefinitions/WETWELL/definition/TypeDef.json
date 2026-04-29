@@ -1,0 +1,25 @@
+{
+  "containments" : [],
+  "description" : "Pump Station - Wet Well",
+  "level" : "ASSET",
+  "name" : "WETWELL",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "%",
+      "mandatory" : true,
+      "name" : "LEVELA",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "%",
+      "mandatory" : true,
+      "name" : "LEVELB",
+      "variableType" : "dynamic"
+    }
+  ]
+}

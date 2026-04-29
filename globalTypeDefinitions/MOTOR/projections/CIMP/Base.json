@@ -87,8 +87,8 @@
       "Value" : ""
     }
   ],
-  "ClassId" : "FILTER",
-  "ClassVersion" : 0,
+  "ClassId" : "MOTOR",
+  "ClassVersion" : 1,
   "CompositeMembers" : [],
   "DataItems" : 
   [
@@ -114,7 +114,7 @@
       "Description" : "",
       "DevicePoint" : 
       {
-        "Address" : "{$ADDRESS}.InletPressure",
+        "Address" : "{$ADDRESS}.Current",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
         "AnalogDeadband" : "",
@@ -142,7 +142,7 @@
       "EngineeringUnits" : 
       {
         "EuExpression" : "",
-        "EuLabel" : "bar",
+        "EuLabel" : "A",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -161,14 +161,14 @@
       "LogDataHistorian" : false,
       "MeasurementUnit" : 
       {
-        "Description" : "Pressure",
-        "DisplayLabel" : "bar",
+        "Description" : "Current",
+        "DisplayLabel" : "A",
         "FullName" : "",
         "NamespaceUri" : "",
         "NumericUnitId" : 1,
-        "UnitId" : "BAR"
+        "UnitId" : "A"
       },
-      "MeasurementUnitID" : "BAR",
+      "MeasurementUnitID" : "A",
       "PointAlarm" : 
       {
         "Alarm" : 
@@ -303,7 +303,7 @@
       {
         "Fields" : []
       },
-      "PointID" : "INLETPRESSURE",
+      "PointID" : "CURRENT",
       "PointState" : true,
       "PointTypeID" : "REAL",
       "Published" : false,
@@ -347,7 +347,7 @@
       "Description" : "",
       "DevicePoint" : 
       {
-        "Address" : "{$ADDRESS}.OutFlow",
+        "Address" : "{$ADDRESS}.Power",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
         "AnalogDeadband" : "",
@@ -375,7 +375,7 @@
       "EngineeringUnits" : 
       {
         "EuExpression" : "",
-        "EuLabel" : "m3/h",
+        "EuLabel" : "kW",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -394,14 +394,14 @@
       "LogDataHistorian" : false,
       "MeasurementUnit" : 
       {
-        "Description" : "M3/H",
-        "DisplayLabel" : "m3/h",
+        "Description" : "Power",
+        "DisplayLabel" : "kW",
         "FullName" : "",
         "NamespaceUri" : "",
         "NumericUnitId" : 1,
-        "UnitId" : "M3/H"
+        "UnitId" : "KW"
       },
-      "MeasurementUnitID" : "M3/H",
+      "MeasurementUnitID" : "KW",
       "PointAlarm" : 
       {
         "Alarm" : 
@@ -536,7 +536,7 @@
       {
         "Fields" : []
       },
-      "PointID" : "OUTFLOW",
+      "PointID" : "POWER",
       "PointState" : true,
       "PointTypeID" : "REAL",
       "Published" : false,
@@ -580,7 +580,7 @@
       "Description" : "",
       "DevicePoint" : 
       {
-        "Address" : "{$ADDRESS}.OutletPressure",
+        "Address" : "{$ADDRESS}.Vibration",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
         "AnalogDeadband" : "",
@@ -608,7 +608,7 @@
       "EngineeringUnits" : 
       {
         "EuExpression" : "",
-        "EuLabel" : "bar",
+        "EuLabel" : "mm/s",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -627,14 +627,14 @@
       "LogDataHistorian" : false,
       "MeasurementUnit" : 
       {
-        "Description" : "Pressure",
-        "DisplayLabel" : "bar",
+        "Description" : "Vibration",
+        "DisplayLabel" : "mm/s",
         "FullName" : "",
         "NamespaceUri" : "",
         "NumericUnitId" : 1,
-        "UnitId" : "BAR"
+        "UnitId" : "MM/S"
       },
-      "MeasurementUnitID" : "BAR",
+      "MeasurementUnitID" : "MM/S",
       "PointAlarm" : 
       {
         "Alarm" : 
@@ -769,7 +769,7 @@
       {
         "Fields" : []
       },
-      "PointID" : "OUTLETPRESSURE",
+      "PointID" : "VIBRATION",
       "PointState" : true,
       "PointTypeID" : "REAL",
       "Published" : false,
@@ -792,9 +792,9 @@
       "changeapproval" : "cimChangeapprovalNone"
     }
   ],
-  "DateTime" : "2026-04-29T14:05:39.1837471Z",
+  "DateTime" : "2026-04-29T14:05:38.5157515Z",
   "DefaultGraphic" : "",
-  "Description" : "",
+  "Description" : "Pump-driving motor - 3 electrical/mechanical ",
   "Events" : [],
   "FaceplateScreen" : "",
   "GraphicsFile" : "",

@@ -1,0 +1,288 @@
+{
+  "Actions" : [],
+  "Attributes" : 
+  [
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "",
+      "HelpString" : "Specifies the base address for the object (required.)",
+      "ID" : "$ADDRESS",
+      "InstantiationType" : "cimInstantionRequired",
+      "Order" : 1,
+      "Prompt" : "Base Address",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "cimBrowserAlarmClass",
+      "HelpString" : "Specifies the default Alarm Class to be used by any alarms for the data items (optional.)",
+      "ID" : "$ALARM_CLASS",
+      "InstantiationType" : "cimInstantionOptional",
+      "Order" : 40,
+      "Prompt" : "Alarm Class",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "",
+      "HelpString" : "Provides a description for the object.",
+      "ID" : "$DESCRIPTION",
+      "InstantiationType" : "cimInstantionOptional",
+      "Order" : 0,
+      "Prompt" : "Description",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "cimBrowserDevice",
+      "HelpString" : "Specifies the device to be used by the data items (required.)",
+      "ID" : "$DEVICE_ID",
+      "InstantiationType" : "cimInstantionRequired",
+      "Order" : 0,
+      "Prompt" : "Device ID",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeAnalog",
+      "BrowserType" : "",
+      "HelpString" : "Specifies default security level for all data items.",
+      "ID" : "$LEVEL",
+      "InstantiationType" : "cimInstantionOptional",
+      "Order" : 50,
+      "Prompt" : "Security Level",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "cimBrowserResource",
+      "HelpString" : "Specifies the resource to be used by the data items (required.)",
+      "ID" : "$RESOURCE_ID",
+      "InstantiationType" : "cimInstantionRequired",
+      "Order" : 10,
+      "Prompt" : "Resource ID",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "",
+      "HelpString" : "Specifies the default graphics screen to be used by the data items (optional.)",
+      "ID" : "$SCREEN_ID",
+      "InstantiationType" : "cimInstantionOptional",
+      "Order" : 20,
+      "Prompt" : "Screen ID",
+      "PropertyPage" : "General",
+      "Reference" : false,
+      "Value" : ""
+    }
+  ],
+  "ClassId" : "PUMPTRAIN",
+  "ClassVersion" : 3,
+  "CompositeMembers" : 
+  [
+    {
+      "ClassID" : "MOTOR",
+      "ClassMembers" : 
+      [
+        {
+          "Attributes" : 
+          [
+            {
+              "ID" : "$DEVICE_ID",
+              "Value" : "{..\\$DEVICE_ID}"
+            },
+            {
+              "ID" : "$RESOURCE_ID",
+              "Value" : "{..\\$RESOURCE_ID}"
+            },
+            {
+              "ID" : "$ADDRESS",
+              "Value" : "{..\\$ADDRESS}.Motor1"
+            }
+          ],
+          "ClassID" : "MOTOR",
+          "ID" : "MOTOR1",
+          "Routing" : []
+        }
+      ],
+      "Count" : 1,
+      "Description" : "",
+      "Expressions" : [],
+      "ID" : "MOTOR1"
+    },
+    {
+      "ClassID" : "MOTOR",
+      "ClassMembers" : 
+      [
+        {
+          "Attributes" : 
+          [
+            {
+              "ID" : "$DEVICE_ID",
+              "Value" : "{..\\$DEVICE_ID}"
+            },
+            {
+              "ID" : "$RESOURCE_ID",
+              "Value" : "{..\\$RESOURCE_ID}"
+            },
+            {
+              "ID" : "$ADDRESS",
+              "Value" : "{..\\$ADDRESS}.Motor2"
+            }
+          ],
+          "ClassID" : "MOTOR",
+          "ID" : "MOTOR2",
+          "Routing" : []
+        }
+      ],
+      "Count" : 1,
+      "Description" : "",
+      "Expressions" : [],
+      "ID" : "MOTOR2"
+    },
+    {
+      "ClassID" : "MOTOR",
+      "ClassMembers" : 
+      [
+        {
+          "Attributes" : 
+          [
+            {
+              "ID" : "$DEVICE_ID",
+              "Value" : "{..\\$DEVICE_ID}"
+            },
+            {
+              "ID" : "$RESOURCE_ID",
+              "Value" : "{..\\$RESOURCE_ID}"
+            },
+            {
+              "ID" : "$ADDRESS",
+              "Value" : "{..\\$ADDRESS}.Motor3"
+            }
+          ],
+          "ClassID" : "MOTOR",
+          "ID" : "MOTOR3",
+          "Routing" : []
+        }
+      ],
+      "Count" : 1,
+      "Description" : "",
+      "Expressions" : [],
+      "ID" : "MOTOR3"
+    },
+    {
+      "ClassID" : "PUMP",
+      "ClassMembers" : 
+      [
+        {
+          "Attributes" : 
+          [
+            {
+              "ID" : "$DEVICE_ID",
+              "Value" : "{..\\$DEVICE_ID}"
+            },
+            {
+              "ID" : "$RESOURCE_ID",
+              "Value" : "{..\\$RESOURCE_ID}"
+            },
+            {
+              "ID" : "$ADDRESS",
+              "Value" : "{..\\$ADDRESS}.Pump1"
+            }
+          ],
+          "ClassID" : "PUMP",
+          "ID" : "PUMP1",
+          "Routing" : []
+        }
+      ],
+      "Count" : 1,
+      "Description" : "",
+      "Expressions" : [],
+      "ID" : "PUMP1"
+    },
+    {
+      "ClassID" : "PUMP",
+      "ClassMembers" : 
+      [
+        {
+          "Attributes" : 
+          [
+            {
+              "ID" : "$DEVICE_ID",
+              "Value" : "{..\\$DEVICE_ID}"
+            },
+            {
+              "ID" : "$RESOURCE_ID",
+              "Value" : "{..\\$RESOURCE_ID}"
+            },
+            {
+              "ID" : "$ADDRESS",
+              "Value" : "{..\\$ADDRESS}.Pump2"
+            }
+          ],
+          "ClassID" : "PUMP",
+          "ID" : "PUMP2",
+          "Routing" : []
+        }
+      ],
+      "Count" : 1,
+      "Description" : "",
+      "Expressions" : [],
+      "ID" : "PUMP2"
+    },
+    {
+      "ClassID" : "PUMP",
+      "ClassMembers" : 
+      [
+        {
+          "Attributes" : 
+          [
+            {
+              "ID" : "$DEVICE_ID",
+              "Value" : "{..\\$DEVICE_ID}"
+            },
+            {
+              "ID" : "$RESOURCE_ID",
+              "Value" : "{..\\$RESOURCE_ID}"
+            },
+            {
+              "ID" : "$ADDRESS",
+              "Value" : "{..\\$ADDRESS}.Pump3"
+            }
+          ],
+          "ClassID" : "PUMP",
+          "ID" : "PUMP3",
+          "Routing" : []
+        }
+      ],
+      "Count" : 1,
+      "Description" : "",
+      "Expressions" : [],
+      "ID" : "PUMP3"
+    }
+  ],
+  "DataItems" : [],
+  "DateTime" : "2026-04-29T14:05:38.6587485Z",
+  "DefaultGraphic" : "",
+  "Description" : "Pump train — 3 pumps + 3 motors",
+  "Events" : [],
+  "FaceplateScreen" : "",
+  "GraphicsFile" : "",
+  "HelpFile" : "",
+  "PostCreateScript" : "",
+  "PreCreateScript" : "",
+  "PreDeleteScript" : "",
+  "SchemaVersion" : "V1.0.0",
+  "Scripts" : []
+}

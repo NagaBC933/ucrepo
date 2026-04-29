@@ -1,0 +1,17 @@
+{
+  "containments" : [],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "INTAKE",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "m3/h",
+      "mandatory" : true,
+      "name" : "INFLOW",
+      "variableType" : "dynamic"
+    }
+  ]
+}

@@ -87,8 +87,8 @@
       "Value" : ""
     }
   ],
-  "ClassId" : "FILTER",
-  "ClassVersion" : 0,
+  "ClassId" : "FILTRATIONCONTROL",
+  "ClassVersion" : 1,
   "CompositeMembers" : [],
   "DataItems" : 
   [
@@ -114,7 +114,7 @@
       "Description" : "",
       "DevicePoint" : 
       {
-        "Address" : "{$ADDRESS}.InletPressure",
+        "Address" : "{$ADDRESS}.TurbidityPV",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
         "AnalogDeadband" : "",
@@ -142,7 +142,7 @@
       "EngineeringUnits" : 
       {
         "EuExpression" : "",
-        "EuLabel" : "bar",
+        "EuLabel" : "NTU",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -161,14 +161,14 @@
       "LogDataHistorian" : false,
       "MeasurementUnit" : 
       {
-        "Description" : "Pressure",
-        "DisplayLabel" : "bar",
+        "Description" : "Turbidity",
+        "DisplayLabel" : "NTU",
         "FullName" : "",
         "NamespaceUri" : "",
         "NumericUnitId" : 1,
-        "UnitId" : "BAR"
+        "UnitId" : "NTU"
       },
-      "MeasurementUnitID" : "BAR",
+      "MeasurementUnitID" : "NTU",
       "PointAlarm" : 
       {
         "Alarm" : 
@@ -303,7 +303,7 @@
       {
         "Fields" : []
       },
-      "PointID" : "INLETPRESSURE",
+      "PointID" : "TURBIDITYPV",
       "PointState" : true,
       "PointTypeID" : "REAL",
       "Published" : false,
@@ -347,7 +347,7 @@
       "Description" : "",
       "DevicePoint" : 
       {
-        "Address" : "{$ADDRESS}.OutFlow",
+        "Address" : "{$ADDRESS}.TurbiditySP",
         "AddressOffset" : 0,
         "AddressType" : "cimMMSFullyQualified",
         "AnalogDeadband" : "",
@@ -375,7 +375,7 @@
       "EngineeringUnits" : 
       {
         "EuExpression" : "",
-        "EuLabel" : "m3/h",
+        "EuLabel" : "NTU",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -394,14 +394,14 @@
       "LogDataHistorian" : false,
       "MeasurementUnit" : 
       {
-        "Description" : "M3/H",
-        "DisplayLabel" : "m3/h",
+        "Description" : "Turbidity",
+        "DisplayLabel" : "NTU",
         "FullName" : "",
         "NamespaceUri" : "",
         "NumericUnitId" : 1,
-        "UnitId" : "M3/H"
+        "UnitId" : "NTU"
       },
-      "MeasurementUnitID" : "M3/H",
+      "MeasurementUnitID" : "NTU",
       "PointAlarm" : 
       {
         "Alarm" : 
@@ -536,240 +536,7 @@
       {
         "Fields" : []
       },
-      "PointID" : "OUTFLOW",
-      "PointState" : true,
-      "PointTypeID" : "REAL",
-      "Published" : false,
-      "RangeLimitHigh" : "",
-      "RangeLimitLow" : "",
-      "ReadOnly" : false,
-      "ResourceID" : "",
-      "SafetyPointID" : "",
-      "ScreenID" : "",
-      "SetpointLimitHigh" : "",
-      "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
-        "Duration" : 0,
-        "MaxBuffered" : 0
-      },
-      "TriggerCheckPointID" : "",
-      "TriggerPointID" : "",
-      "Type" : "cimDevice",
-      "changeapproval" : "cimChangeapprovalNone"
-    },
-    {
-      "AttributeSet" : "",
-      "DataLen" : 0,
-      "DataType" : "cimReal",
-      "DeadBand" : "",
-      "DerivedPoint" : 
-      {
-        "CalculationType" : "cimExpression",
-        "InitState" : "cimUnavailable",
-        "InitValue" : "",
-        "Local" : false,
-        "PointExpression" : "",
-        "PointSetInterval" : "",
-        "PointSetTime" : "",
-        "ProcessID" : "",
-        "ResetPointID" : "",
-        "RolloverVal" : 0,
-        "VarianceValue" : 0
-      },
-      "Description" : "",
-      "DevicePoint" : 
-      {
-        "Address" : "{$ADDRESS}.OutletPressure",
-        "AddressOffset" : 0,
-        "AddressType" : "cimMMSFullyQualified",
-        "AnalogDeadband" : "",
-        "BufferRedundData" : false,
-        "DelayLoad" : false,
-        "DeviceID" : "",
-        "JustInTime" : false,
-        "PollAfterSetpoint" : true,
-        "ScanRate" : 1,
-        "TriggerType" : "cimNoTrigger",
-        "TriggerValue" : "",
-        "UpdateCriteria" : "cimOnchange"
-      },
-      "DisplayFormat" : 
-      {
-        "FormatSpecifier" : "%-f",
-        "Justification" : "cimLeft",
-        "Precision" : "",
-        "Type" : "cimFixed",
-        "Width" : ""
-      },
-      "DisplayLimitHigh" : "",
-      "DisplayLimitLow" : "",
-      "Elements" : 1,
-      "EngineeringUnits" : 
-      {
-        "EuExpression" : "",
-        "EuLabel" : "bar",
-        "EuRevExp" : "",
-        "HighConvValue" : "",
-        "HighRawValue" : "",
-        "LinearConversion" : false,
-        "LowConvValue" : "",
-        "LowRawValue" : ""
-      },
-      "EnterprisePoint" : false,
-      "EnumerationID" : "",
-      "EuExists" : false,
-      "Expressions" : [],
-      "Extra" : 0,
-      "InvertAvailabilityTrigger" : false,
-      "Level" : 0,
-      "LogData" : false,
-      "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
-        "Description" : "Pressure",
-        "DisplayLabel" : "bar",
-        "FullName" : "",
-        "NamespaceUri" : "",
-        "NumericUnitId" : 1,
-        "UnitId" : "BAR"
-      },
-      "MeasurementUnitID" : "BAR",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
-          "AckTimeout" : 0,
-          "AlarmClass" : "",
-          "AlarmDescription" : "",
-          "AlarmID" : "",
-          "AlarmMessage" : "",
-          "AlarmTypeID" : "",
-          "DeleteOpt" : "cimAckedReset",
-          "HelpFileName" : "",
-          "HiAckTimeout" : 0,
-          "HiDeleteOpt" : "cimAckedReset",
-          "HiHiAckTimeout" : 0,
-          "HiHiDeleteOpt" : "cimAckedReset",
-          "HiHiLogOpt" : "",
-          "HiHiRepeatTimeout" : 0,
-          "HiHiResetAllowed" : false,
-          "HiHiResetTimeout" : 0,
-          "HiLogOpt" : "",
-          "HiRepeatTimeout" : 0,
-          "HiResetAllowed" : false,
-          "HiResetTimeout" : 0,
-          "LoAckTimeout" : 0,
-          "LoDeleteOpt" : "cimAckedReset",
-          "LoLoAckTimeout" : 0,
-          "LoLoDeleteOpt" : "cimAckedReset",
-          "LoLoLogOpt" : "",
-          "LoLoRepeatTimeout" : 0,
-          "LoLoResetAllowed" : false,
-          "LoLoResetTimeout" : 0,
-          "LoLogOpt" : "",
-          "LoRepeatTimeout" : 0,
-          "LoResetAllowed" : false,
-          "LoResetTimeout" : 0,
-          "LogOpt" : "",
-          "MaxStacked" : 0,
-          "Published" : false,
-          "RepeatTimeout" : 0,
-          "ResetAllowed" : false,
-          "ResetTimeout" : 0,
-          "Routing" : [],
-          "Severity" : 0,
-          "changeapproval" : "cimChangeapprovalNone"
-        },
-        "AlarmConfigured" : false,
-        "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
-          {
-            "Description" : "",
-            "ID" : "Attribute1",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute10",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute2",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute3",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute4",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute5",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute6",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute7",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute8",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute9",
-            "Value" : ""
-          }
-        ],
-        "AlarmDelay" : false,
-        "AlarmHigh" : "",
-        "AlarmLow" : "",
-        "AlarmMessage" : "",
-        "AlarmOffDelay" : false,
-        "AlarmStrID" : 1,
-        "AlarmValueUpdate" : false,
-        "DeviationPtID" : "",
-        "HiDelayInterval" : "0",
-        "HiDelayUnit" : "cimNone",
-        "HiHiDelayInterval" : "0",
-        "HiHiDelayUnit" : "cimNone",
-        "HiHiOffDelayInterval" : "0",
-        "HiHiOffDelayUnit" : "cimNone",
-        "HiOffDelayInterval" : "0",
-        "HiOffDelayUnit" : "cimNone",
-        "LoDelayInterval" : "0",
-        "LoDelayUnit" : "cimNone",
-        "LoLoDelayInterval" : "0",
-        "LoLoDelayUnit" : "cimNone",
-        "LoLoOffDelayInterval" : "0",
-        "LoLoOffDelayUnit" : "cimNone",
-        "LoOffDelayInterval" : "0",
-        "LoOffDelayUnit" : "cimNone",
-        "TimeInterval" : "0",
-        "TimeUnit" : "cimNone",
-        "WarningHigh" : "",
-        "WarningLow" : ""
-      },
-      "PointEnum" : 
-      {
-        "Fields" : []
-      },
-      "PointID" : "OUTLETPRESSURE",
+      "PointID" : "TURBIDITYSP",
       "PointState" : true,
       "PointTypeID" : "REAL",
       "Published" : false,
@@ -792,7 +559,7 @@
       "changeapproval" : "cimChangeapprovalNone"
     }
   ],
-  "DateTime" : "2026-04-29T14:05:39.1837471Z",
+  "DateTime" : "2026-04-29T14:05:38.4737517Z",
   "DefaultGraphic" : "",
   "Description" : "",
   "Events" : [],

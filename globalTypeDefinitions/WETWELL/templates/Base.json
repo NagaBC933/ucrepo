@@ -1,0 +1,107 @@
+{
+  "description" : "template for class WETWELL",
+  "name" : "Base",
+  "projections" : 
+  {
+    "CIMP" : "../projections/CIMP/Base.json"
+  },
+  "substitutionParameters" : 
+  [
+    {
+      "browserType" : "",
+      "dataType" : "string",
+      "defaultValue" : "",
+      "helpString" : "Specifies the base address for the object (required.)",
+      "instantiationType" : "Required",
+      "name" : "$ADDRESS",
+      "order" : 1,
+      "prompt" : "Base Address",
+      "propertyPage" : "General",
+      "reference" : false
+    },
+    {
+      "browserType" : "ALARM_CLASS",
+      "dataType" : "string",
+      "defaultValue" : "",
+      "helpString" : "Specifies the default Alarm Class to be used by any alarms for the data items (optional.)",
+      "instantiationType" : "Optional",
+      "name" : "$ALARM_CLASS",
+      "order" : 40,
+      "prompt" : "Alarm Class",
+      "propertyPage" : "General",
+      "reference" : false
+    },
+    {
+      "browserType" : "",
+      "dataType" : "string",
+      "defaultValue" : "",
+      "helpString" : "Provides a description for the object.",
+      "instantiationType" : "Optional",
+      "name" : "$DESCRIPTION",
+      "order" : 0,
+      "prompt" : "Description",
+      "propertyPage" : "General",
+      "reference" : false
+    },
+    {
+      "browserType" : "DEVICE",
+      "dataType" : "string",
+      "defaultValue" : "",
+      "helpString" : "Specifies the device to be used by the data items (required.)",
+      "instantiationType" : "Required",
+      "name" : "$DEVICE_ID",
+      "order" : 0,
+      "prompt" : "Device ID",
+      "propertyPage" : "General",
+      "reference" : false
+    },
+    {
+      "browserType" : "",
+      "dataType" : "numeric",
+      "defaultValue" : "",
+      "helpString" : "Specifies default security level for all data items.",
+      "instantiationType" : "Optional",
+      "name" : "$LEVEL",
+      "order" : 50,
+      "prompt" : "Security Level",
+      "propertyPage" : "General",
+      "reference" : false
+    },
+    {
+      "browserType" : "RESOURCE",
+      "dataType" : "string",
+      "defaultValue" : "",
+      "helpString" : "Specifies the resource to be used by the data items (required.)",
+      "instantiationType" : "Required",
+      "name" : "$RESOURCE_ID",
+      "order" : 10,
+      "prompt" : "Resource ID",
+      "propertyPage" : "General",
+      "reference" : false
+    },
+    {
+      "browserType" : "",
+      "dataType" : "string",
+      "defaultValue" : "",
+      "helpString" : "Specifies the default graphics screen to be used by the data items (optional.)",
+      "instantiationType" : "Optional",
+      "name" : "$SCREEN_ID",
+      "order" : 20,
+      "prompt" : "Screen ID",
+      "propertyPage" : "General",
+      "reference" : false
+    }
+  ],
+  "templateContainments" : [],
+  "templateVariables" : 
+  [
+    {
+      "include" : true,
+      "name" : "LEVELA"
+    },
+    {
+      "include" : true,
+      "name" : "LEVELB"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "containments" : [],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "FILTRATIONCONTROL",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "NTU",
+      "mandatory" : true,
+      "name" : "TURBIDITYPV",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "NTU",
+      "mandatory" : true,
+      "name" : "TURBIDITYSP",
+      "variableType" : "dynamic"
+    }
+  ]
+}

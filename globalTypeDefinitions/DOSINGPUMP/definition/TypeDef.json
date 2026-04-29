@@ -1,0 +1,17 @@
+{
+  "containments" : [],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "DOSINGPUMP",
+  "variables" : 
+  [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "mg/l",
+      "mandatory" : true,
+      "name" : "CHEMICALDOSERATE",
+      "variableType" : "dynamic"
+    }
+  ]
+}
