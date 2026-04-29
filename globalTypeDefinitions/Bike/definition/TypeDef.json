@@ -1,0 +1,17 @@
+{
+  "containments" : [ ],
+  "description" : "",
+  "level" : "ASSET",
+  "name" : "Bike",
+  "subParameters" : [ ],
+  "variables" : [
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "CC125",
+      "variableType" : "dynamic"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "description" : "Default template for type.",
+  "name" : "Base",
+  "projections" : {
+    "CIMP" : "../projections/CIMP/Base.json"
+  },
+  "templateContainments" : [ ],
+  "templateVariables" : [
+    {
+      "include" : true,
+      "name" : "CC125"
+    }
+  ]
+}
