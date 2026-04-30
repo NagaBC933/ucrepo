@@ -1,12 +1,14 @@
 {
   "description" : "Default template for type.",
   "name" : "Base",
-  "projections" : { },
+  "projections" : {
+    "CIMP" : "../projections/CIMP/Base.json"
+  },
   "templateContainments" : [ ],
   "templateVariables" : [
     {
       "include" : true,
-      "name" : "height"
+      "name" : "base"
     }
   ]
 }
