@@ -1,106 +1,115 @@
 {
-  "Actions" : [],
-  "Attributes" : 
-  [
+  "Actions" : [ ],
+  "Attributes" : [
     {
       "AttributeType" : "cimAttributeString",
       "BrowserType" : "",
-      "HelpString" : "Specifies the base address for the object (required.)",
-      "ID" : "$ADDRESS",
-      "InstantiationType" : "cimInstantionRequired",
-      "Order" : 1,
-      "Prompt" : "Base Address",
-      "PropertyPage" : "General",
-      "Reference" : false,
-      "Value" : ""
-    },
-    {
-      "AttributeType" : "cimAttributeString",
-      "BrowserType" : "cimBrowserAlarmClass",
-      "HelpString" : "Specifies the default Alarm Class to be used by any alarms for the data items (optional.)",
-      "ID" : "$ALARM_CLASS",
-      "InstantiationType" : "cimInstantionOptional",
-      "Order" : 40,
-      "Prompt" : "Alarm Class",
-      "PropertyPage" : "General",
-      "Reference" : false,
-      "Value" : ""
-    },
-    {
-      "AttributeType" : "cimAttributeString",
-      "BrowserType" : "",
-      "HelpString" : "Provides a description for the object.",
+      "HelpString" : "",
       "ID" : "$DESCRIPTION",
       "InstantiationType" : "cimInstantionOptional",
       "Order" : 0,
       "Prompt" : "Description",
-      "PropertyPage" : "General",
+      "PropertyPage" : "GENERAL",
       "Reference" : false,
       "Value" : ""
     },
     {
       "AttributeType" : "cimAttributeString",
-      "BrowserType" : "cimBrowserDevice",
-      "HelpString" : "Specifies the device to be used by the data items (required.)",
-      "ID" : "$DEVICE_ID",
+      "BrowserType" : "",
+      "HelpString" : "",
+      "ID" : "$EU_LABEL",
+      "InstantiationType" : "cimInstantionOptional",
+      "Order" : 30,
+      "Prompt" : "EU Label",
+      "PropertyPage" : "GENERAL",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "",
+      "HelpString" : "",
+      "ID" : "$ADDRESS",
       "InstantiationType" : "cimInstantionRequired",
-      "Order" : 0,
-      "Prompt" : "Device ID",
-      "PropertyPage" : "General",
+      "Order" : 1,
+      "Prompt" : "Base Address",
+      "PropertyPage" : "GENERAL",
       "Reference" : false,
       "Value" : ""
     },
     {
       "AttributeType" : "cimAttributeAnalog",
       "BrowserType" : "",
-      "HelpString" : "Specifies default security level for all data items.",
+      "HelpString" : "",
       "ID" : "$LEVEL",
       "InstantiationType" : "cimInstantionOptional",
       "Order" : 50,
       "Prompt" : "Security Level",
-      "PropertyPage" : "General",
+      "PropertyPage" : "GENERAL",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "cimBrowserDevice",
+      "HelpString" : "",
+      "ID" : "$DEVICE_ID",
+      "InstantiationType" : "cimInstantionRequired",
+      "Order" : 0,
+      "Prompt" : "Device ID",
+      "PropertyPage" : "GENERAL",
       "Reference" : false,
       "Value" : ""
     },
     {
       "AttributeType" : "cimAttributeString",
       "BrowserType" : "cimBrowserResource",
-      "HelpString" : "Specifies the resource to be used by the data items (required.)",
+      "HelpString" : "",
       "ID" : "$RESOURCE_ID",
       "InstantiationType" : "cimInstantionRequired",
       "Order" : 10,
       "Prompt" : "Resource ID",
-      "PropertyPage" : "General",
+      "PropertyPage" : "GENERAL",
       "Reference" : false,
       "Value" : ""
     },
     {
       "AttributeType" : "cimAttributeString",
       "BrowserType" : "",
-      "HelpString" : "Specifies the default graphics screen to be used by the data items (optional.)",
+      "HelpString" : "",
       "ID" : "$SCREEN_ID",
       "InstantiationType" : "cimInstantionOptional",
       "Order" : 20,
       "Prompt" : "Screen ID",
-      "PropertyPage" : "General",
+      "PropertyPage" : "GENERAL",
+      "Reference" : false,
+      "Value" : ""
+    },
+    {
+      "AttributeType" : "cimAttributeString",
+      "BrowserType" : "cimBrowserAlarmClass",
+      "HelpString" : "",
+      "ID" : "$ALARM_CLASS",
+      "InstantiationType" : "cimInstantionOptional",
+      "Order" : 40,
+      "Prompt" : "Alarm Class",
+      "PropertyPage" : "GENERAL",
       "Reference" : false,
       "Value" : ""
     }
   ],
-  "ClassId" : "PUMP",
-  "ClassVersion" : 2,
-  "CompositeMembers" : [],
-  "DataItems" : 
-  [
+  "ClassId" : "Pump",
+  "ClassVersion" : 0,
+  "CompositeMembers" : [ ],
+  "DataItems" : [
     {
       "AttributeSet" : "",
       "DataLen" : 0,
-      "DataType" : "cimReal",
+      "DataType" : "cimInteger",
       "DeadBand" : "",
-      "DerivedPoint" : 
-      {
-        "CalculationType" : "cimExpression",
-        "InitState" : "cimUnavailable",
+      "DerivedPoint" : {
+        "CalculationType" : "",
+        "InitState" : "",
         "InitValue" : "",
         "Local" : false,
         "PointExpression" : "",
@@ -112,37 +121,33 @@
         "VarianceValue" : 0
       },
       "Description" : "",
-      "DevicePoint" : 
-      {
-        "Address" : "{$ADDRESS}.DischargeFlow",
+      "DevicePoint" : {
+        "Address" : "",
         "AddressOffset" : 0,
-        "AddressType" : "cimMMSFullyQualified",
+        "AddressType" : "",
         "AnalogDeadband" : "",
-        "BufferRedundData" : false,
         "DelayLoad" : false,
-        "DeviceID" : "{$DEVICE_ID}",
+        "DeviceID" : "",
         "JustInTime" : false,
-        "PollAfterSetpoint" : true,
-        "ScanRate" : 1,
-        "TriggerType" : "cimNoTrigger",
+        "PollAfterSetpoint" : false,
+        "ScanRate" : 0,
+        "TriggerType" : "",
         "TriggerValue" : "",
-        "UpdateCriteria" : "cimOnchange"
+        "UpdateCriteria" : ""
       },
-      "DisplayFormat" : 
-      {
-        "FormatSpecifier" : "%-f",
-        "Justification" : "cimLeft",
+      "DisplayFormat" : {
+        "FormatSpecifier" : "",
+        "Justification" : "",
         "Precision" : "",
-        "Type" : "cimFixed",
+        "Type" : "",
         "Width" : ""
       },
       "DisplayLimitHigh" : "",
       "DisplayLimitLow" : "",
       "Elements" : 1,
-      "EngineeringUnits" : 
-      {
+      "EngineeringUnits" : {
         "EuExpression" : "",
-        "EuLabel" : "m3/h",
+        "EuLabel" : "",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -151,40 +156,55 @@
         "LowRawValue" : ""
       },
       "EnterprisePoint" : false,
+      "EnumFields" : [
+        {
+          "SetpointAllowed" : false,
+          "Text" : "",
+          "Value" : 0
+        }
+      ],
       "EnumerationID" : "",
       "EuExists" : false,
-      "Expressions" : [],
+      "Expressions" : [
+        {
+          "FirstOperandNum" : 0,
+          "FirstOperandString" : "",
+          "ID" : "",
+          "Operator" : "",
+          "SecondOperandNum" : 0,
+          "SecondOperandString" : ""
+        }
+      ],
       "Extra" : 0,
       "InvertAvailabilityTrigger" : false,
       "Level" : 0,
       "LogData" : false,
       "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
-        "Description" : "M3/H",
-        "DisplayLabel" : "m3/h",
+      "MeasurementUnit" : {
+        "Description" : "",
+        "DisplayLabel" : "",
         "FullName" : "",
         "NamespaceUri" : "",
-        "NumericUnitId" : 1,
-        "UnitId" : "M3/H"
+        "NumericUnitId" : 0,
+        "UnitId" : ""
       },
-      "MeasurementUnitID" : "M3/H",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
+      "MeasurementUnitID" : "",
+      "OPCUA_NodeID" : "",
+      "PointAlarm" : {
+        "Alarm" : {
           "AckTimeout" : 0,
           "AlarmClass" : "",
           "AlarmDescription" : "",
           "AlarmID" : "",
           "AlarmMessage" : "",
           "AlarmTypeID" : "",
-          "DeleteOpt" : "cimAckedReset",
+          "Changeapproval" : "",
+          "DeleteOpt" : "",
           "HelpFileName" : "",
           "HiAckTimeout" : 0,
-          "HiDeleteOpt" : "cimAckedReset",
+          "HiDeleteOpt" : "",
           "HiHiAckTimeout" : 0,
-          "HiHiDeleteOpt" : "cimAckedReset",
+          "HiHiDeleteOpt" : "",
           "HiHiLogOpt" : "",
           "HiHiRepeatTimeout" : 0,
           "HiHiResetAllowed" : false,
@@ -194,9 +214,9 @@
           "HiResetAllowed" : false,
           "HiResetTimeout" : 0,
           "LoAckTimeout" : 0,
-          "LoDeleteOpt" : "cimAckedReset",
+          "LoDeleteOpt" : "",
           "LoLoAckTimeout" : 0,
-          "LoLoDeleteOpt" : "cimAckedReset",
+          "LoLoDeleteOpt" : "",
           "LoLoLogOpt" : "",
           "LoLoRepeatTimeout" : 0,
           "LoLoResetAllowed" : false,
@@ -211,63 +231,18 @@
           "RepeatTimeout" : 0,
           "ResetAllowed" : false,
           "ResetTimeout" : 0,
-          "Routing" : [],
-          "Severity" : 0,
-          "changeapproval" : "cimChangeapprovalNone"
+          "Routing" : [
+            ""
+          ],
+          "Severity" : 0
         },
         "AlarmConfigured" : false,
         "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
+        "AlarmCustomAttributes" : [
           {
-            "Description" : "",
             "ID" : "Attribute1",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute10",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute2",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute3",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute4",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute5",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute6",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute7",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute8",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute9",
-            "Value" : ""
+            "Value" : "",
+            "description" : ""
           }
         ],
         "AlarmDelay" : false,
@@ -275,37 +250,33 @@
         "AlarmLow" : "",
         "AlarmMessage" : "",
         "AlarmOffDelay" : false,
-        "AlarmStrID" : 1,
+        "AlarmStrID" : 0,
         "AlarmValueUpdate" : false,
         "DeviationPtID" : "",
-        "HiDelayInterval" : "0",
-        "HiDelayUnit" : "cimNone",
-        "HiHiDelayInterval" : "0",
-        "HiHiDelayUnit" : "cimNone",
-        "HiHiOffDelayInterval" : "0",
-        "HiHiOffDelayUnit" : "cimNone",
-        "HiOffDelayInterval" : "0",
-        "HiOffDelayUnit" : "cimNone",
-        "LoDelayInterval" : "0",
-        "LoDelayUnit" : "cimNone",
-        "LoLoDelayInterval" : "0",
-        "LoLoDelayUnit" : "cimNone",
-        "LoLoOffDelayInterval" : "0",
-        "LoLoOffDelayUnit" : "cimNone",
-        "LoOffDelayInterval" : "0",
-        "LoOffDelayUnit" : "cimNone",
-        "TimeInterval" : "0",
-        "TimeUnit" : "cimNone",
+        "HiDelayInterval" : "",
+        "HiDelayUnit" : "",
+        "HiHiDelayInterval" : "",
+        "HiHiDelayUnit" : "",
+        "HiHiOffDelayInterval" : "",
+        "HiHiOffDelayUnit" : "",
+        "HiOffDelayInterval" : "",
+        "HiOffDelayUnit" : "",
+        "LoDelayInterval" : "",
+        "LoDelayUnit" : "",
+        "LoLoDelayInterval" : "",
+        "LoLoDelayUnit" : "",
+        "LoLoOffDelayInterval" : "",
+        "LoLoOffDelayUnit" : "",
+        "LoOffDelayInterval" : "",
+        "LoOffDelayUnit" : "",
+        "TimeInterval" : "",
+        "TimeUnit" : "",
         "WarningHigh" : "",
         "WarningLow" : ""
       },
-      "PointEnum" : 
-      {
-        "Fields" : []
-      },
-      "PointID" : "DISCHARGEFLOW",
+      "PointID" : "Pressure",
       "PointState" : true,
-      "PointTypeID" : "REAL",
+      "PointTypeID" : "INT",
       "Published" : false,
       "RangeLimitHigh" : "",
       "RangeLimitLow" : "",
@@ -315,25 +286,23 @@
       "ScreenID" : "",
       "SetpointLimitHigh" : "",
       "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
+      "TrendBuffering" : {
         "Duration" : 0,
         "MaxBuffered" : 0
       },
       "TriggerCheckPointID" : "",
       "TriggerPointID" : "",
-      "Type" : "cimDevice",
+      "Type" : "cimGlobal",
       "changeapproval" : "cimChangeapprovalNone"
     },
     {
       "AttributeSet" : "",
       "DataLen" : 0,
-      "DataType" : "cimReal",
+      "DataType" : "cimInteger",
       "DeadBand" : "",
-      "DerivedPoint" : 
-      {
-        "CalculationType" : "cimExpression",
-        "InitState" : "cimUnavailable",
+      "DerivedPoint" : {
+        "CalculationType" : "",
+        "InitState" : "",
         "InitValue" : "",
         "Local" : false,
         "PointExpression" : "",
@@ -345,37 +314,33 @@
         "VarianceValue" : 0
       },
       "Description" : "",
-      "DevicePoint" : 
-      {
-        "Address" : "{$ADDRESS}.DischargePressure",
+      "DevicePoint" : {
+        "Address" : "",
         "AddressOffset" : 0,
-        "AddressType" : "cimMMSFullyQualified",
+        "AddressType" : "",
         "AnalogDeadband" : "",
-        "BufferRedundData" : false,
         "DelayLoad" : false,
-        "DeviceID" : "{$DEVICE_ID}",
+        "DeviceID" : "",
         "JustInTime" : false,
-        "PollAfterSetpoint" : true,
-        "ScanRate" : 1,
-        "TriggerType" : "cimNoTrigger",
+        "PollAfterSetpoint" : false,
+        "ScanRate" : 0,
+        "TriggerType" : "",
         "TriggerValue" : "",
-        "UpdateCriteria" : "cimOnchange"
+        "UpdateCriteria" : ""
       },
-      "DisplayFormat" : 
-      {
-        "FormatSpecifier" : "%-f",
-        "Justification" : "cimLeft",
+      "DisplayFormat" : {
+        "FormatSpecifier" : "",
+        "Justification" : "",
         "Precision" : "",
-        "Type" : "cimFixed",
+        "Type" : "",
         "Width" : ""
       },
       "DisplayLimitHigh" : "",
       "DisplayLimitLow" : "",
       "Elements" : 1,
-      "EngineeringUnits" : 
-      {
+      "EngineeringUnits" : {
         "EuExpression" : "",
-        "EuLabel" : "bar",
+        "EuLabel" : "",
         "EuRevExp" : "",
         "HighConvValue" : "",
         "HighRawValue" : "",
@@ -384,40 +349,55 @@
         "LowRawValue" : ""
       },
       "EnterprisePoint" : false,
+      "EnumFields" : [
+        {
+          "SetpointAllowed" : false,
+          "Text" : "",
+          "Value" : 0
+        }
+      ],
       "EnumerationID" : "",
       "EuExists" : false,
-      "Expressions" : [],
+      "Expressions" : [
+        {
+          "FirstOperandNum" : 0,
+          "FirstOperandString" : "",
+          "ID" : "",
+          "Operator" : "",
+          "SecondOperandNum" : 0,
+          "SecondOperandString" : ""
+        }
+      ],
       "Extra" : 0,
       "InvertAvailabilityTrigger" : false,
       "Level" : 0,
       "LogData" : false,
       "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
-        "Description" : "Pressure",
-        "DisplayLabel" : "bar",
+      "MeasurementUnit" : {
+        "Description" : "",
+        "DisplayLabel" : "",
         "FullName" : "",
         "NamespaceUri" : "",
-        "NumericUnitId" : 1,
-        "UnitId" : "BAR"
+        "NumericUnitId" : 0,
+        "UnitId" : ""
       },
-      "MeasurementUnitID" : "BAR",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
+      "MeasurementUnitID" : "",
+      "OPCUA_NodeID" : "",
+      "PointAlarm" : {
+        "Alarm" : {
           "AckTimeout" : 0,
           "AlarmClass" : "",
           "AlarmDescription" : "",
           "AlarmID" : "",
           "AlarmMessage" : "",
           "AlarmTypeID" : "",
-          "DeleteOpt" : "cimAckedReset",
+          "Changeapproval" : "",
+          "DeleteOpt" : "",
           "HelpFileName" : "",
           "HiAckTimeout" : 0,
-          "HiDeleteOpt" : "cimAckedReset",
+          "HiDeleteOpt" : "",
           "HiHiAckTimeout" : 0,
-          "HiHiDeleteOpt" : "cimAckedReset",
+          "HiHiDeleteOpt" : "",
           "HiHiLogOpt" : "",
           "HiHiRepeatTimeout" : 0,
           "HiHiResetAllowed" : false,
@@ -427,9 +407,9 @@
           "HiResetAllowed" : false,
           "HiResetTimeout" : 0,
           "LoAckTimeout" : 0,
-          "LoDeleteOpt" : "cimAckedReset",
+          "LoDeleteOpt" : "",
           "LoLoAckTimeout" : 0,
-          "LoLoDeleteOpt" : "cimAckedReset",
+          "LoLoDeleteOpt" : "",
           "LoLoLogOpt" : "",
           "LoLoRepeatTimeout" : 0,
           "LoLoResetAllowed" : false,
@@ -444,63 +424,18 @@
           "RepeatTimeout" : 0,
           "ResetAllowed" : false,
           "ResetTimeout" : 0,
-          "Routing" : [],
-          "Severity" : 0,
-          "changeapproval" : "cimChangeapprovalNone"
+          "Routing" : [
+            ""
+          ],
+          "Severity" : 0
         },
         "AlarmConfigured" : false,
         "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
+        "AlarmCustomAttributes" : [
           {
-            "Description" : "",
             "ID" : "Attribute1",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute10",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute2",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute3",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute4",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute5",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute6",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute7",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute8",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute9",
-            "Value" : ""
+            "Value" : "",
+            "description" : ""
           }
         ],
         "AlarmDelay" : false,
@@ -508,37 +443,33 @@
         "AlarmLow" : "",
         "AlarmMessage" : "",
         "AlarmOffDelay" : false,
-        "AlarmStrID" : 1,
+        "AlarmStrID" : 0,
         "AlarmValueUpdate" : false,
         "DeviationPtID" : "",
-        "HiDelayInterval" : "0",
-        "HiDelayUnit" : "cimNone",
-        "HiHiDelayInterval" : "0",
-        "HiHiDelayUnit" : "cimNone",
-        "HiHiOffDelayInterval" : "0",
-        "HiHiOffDelayUnit" : "cimNone",
-        "HiOffDelayInterval" : "0",
-        "HiOffDelayUnit" : "cimNone",
-        "LoDelayInterval" : "0",
-        "LoDelayUnit" : "cimNone",
-        "LoLoDelayInterval" : "0",
-        "LoLoDelayUnit" : "cimNone",
-        "LoLoOffDelayInterval" : "0",
-        "LoLoOffDelayUnit" : "cimNone",
-        "LoOffDelayInterval" : "0",
-        "LoOffDelayUnit" : "cimNone",
-        "TimeInterval" : "0",
-        "TimeUnit" : "cimNone",
+        "HiDelayInterval" : "",
+        "HiDelayUnit" : "",
+        "HiHiDelayInterval" : "",
+        "HiHiDelayUnit" : "",
+        "HiHiOffDelayInterval" : "",
+        "HiHiOffDelayUnit" : "",
+        "HiOffDelayInterval" : "",
+        "HiOffDelayUnit" : "",
+        "LoDelayInterval" : "",
+        "LoDelayUnit" : "",
+        "LoLoDelayInterval" : "",
+        "LoLoDelayUnit" : "",
+        "LoLoOffDelayInterval" : "",
+        "LoLoOffDelayUnit" : "",
+        "LoOffDelayInterval" : "",
+        "LoOffDelayUnit" : "",
+        "TimeInterval" : "",
+        "TimeUnit" : "",
         "WarningHigh" : "",
         "WarningLow" : ""
       },
-      "PointEnum" : 
-      {
-        "Fields" : []
-      },
-      "PointID" : "DISCHARGEPRESSURE",
+      "PointID" : "Height",
       "PointState" : true,
-      "PointTypeID" : "REAL",
+      "PointTypeID" : "INT",
       "Published" : false,
       "RangeLimitHigh" : "",
       "RangeLimitLow" : "",
@@ -548,487 +479,20 @@
       "ScreenID" : "",
       "SetpointLimitHigh" : "",
       "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
+      "TrendBuffering" : {
         "Duration" : 0,
         "MaxBuffered" : 0
       },
       "TriggerCheckPointID" : "",
       "TriggerPointID" : "",
-      "Type" : "cimDevice",
-      "changeapproval" : "cimChangeapprovalNone"
-    },
-    {
-      "AttributeSet" : "",
-      "DataLen" : 0,
-      "DataType" : "cimReal",
-      "DeadBand" : "",
-      "DerivedPoint" : 
-      {
-        "CalculationType" : "cimExpression",
-        "InitState" : "cimUnavailable",
-        "InitValue" : "",
-        "Local" : false,
-        "PointExpression" : "",
-        "PointSetInterval" : "",
-        "PointSetTime" : "",
-        "ProcessID" : "",
-        "ResetPointID" : "",
-        "RolloverVal" : 0,
-        "VarianceValue" : 0
-      },
-      "Description" : "",
-      "DevicePoint" : 
-      {
-        "Address" : "{$ADDRESS}.Efficiency",
-        "AddressOffset" : 0,
-        "AddressType" : "cimMMSFullyQualified",
-        "AnalogDeadband" : "",
-        "BufferRedundData" : false,
-        "DelayLoad" : false,
-        "DeviceID" : "{$DEVICE_ID}",
-        "JustInTime" : false,
-        "PollAfterSetpoint" : true,
-        "ScanRate" : 1,
-        "TriggerType" : "cimNoTrigger",
-        "TriggerValue" : "",
-        "UpdateCriteria" : "cimOnchange"
-      },
-      "DisplayFormat" : 
-      {
-        "FormatSpecifier" : "%-f",
-        "Justification" : "cimLeft",
-        "Precision" : "",
-        "Type" : "cimFixed",
-        "Width" : ""
-      },
-      "DisplayLimitHigh" : "",
-      "DisplayLimitLow" : "",
-      "Elements" : 1,
-      "EngineeringUnits" : 
-      {
-        "EuExpression" : "",
-        "EuLabel" : "%",
-        "EuRevExp" : "",
-        "HighConvValue" : "",
-        "HighRawValue" : "",
-        "LinearConversion" : false,
-        "LowConvValue" : "",
-        "LowRawValue" : ""
-      },
-      "EnterprisePoint" : false,
-      "EnumerationID" : "",
-      "EuExists" : false,
-      "Expressions" : [],
-      "Extra" : 0,
-      "InvertAvailabilityTrigger" : false,
-      "Level" : 0,
-      "LogData" : false,
-      "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
-        "Description" : "Percentage",
-        "DisplayLabel" : "%",
-        "FullName" : "",
-        "NamespaceUri" : "",
-        "NumericUnitId" : 1,
-        "UnitId" : "%"
-      },
-      "MeasurementUnitID" : "%",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
-          "AckTimeout" : 0,
-          "AlarmClass" : "",
-          "AlarmDescription" : "",
-          "AlarmID" : "",
-          "AlarmMessage" : "",
-          "AlarmTypeID" : "",
-          "DeleteOpt" : "cimAckedReset",
-          "HelpFileName" : "",
-          "HiAckTimeout" : 0,
-          "HiDeleteOpt" : "cimAckedReset",
-          "HiHiAckTimeout" : 0,
-          "HiHiDeleteOpt" : "cimAckedReset",
-          "HiHiLogOpt" : "",
-          "HiHiRepeatTimeout" : 0,
-          "HiHiResetAllowed" : false,
-          "HiHiResetTimeout" : 0,
-          "HiLogOpt" : "",
-          "HiRepeatTimeout" : 0,
-          "HiResetAllowed" : false,
-          "HiResetTimeout" : 0,
-          "LoAckTimeout" : 0,
-          "LoDeleteOpt" : "cimAckedReset",
-          "LoLoAckTimeout" : 0,
-          "LoLoDeleteOpt" : "cimAckedReset",
-          "LoLoLogOpt" : "",
-          "LoLoRepeatTimeout" : 0,
-          "LoLoResetAllowed" : false,
-          "LoLoResetTimeout" : 0,
-          "LoLogOpt" : "",
-          "LoRepeatTimeout" : 0,
-          "LoResetAllowed" : false,
-          "LoResetTimeout" : 0,
-          "LogOpt" : "",
-          "MaxStacked" : 0,
-          "Published" : false,
-          "RepeatTimeout" : 0,
-          "ResetAllowed" : false,
-          "ResetTimeout" : 0,
-          "Routing" : [],
-          "Severity" : 0,
-          "changeapproval" : "cimChangeapprovalNone"
-        },
-        "AlarmConfigured" : false,
-        "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
-          {
-            "Description" : "",
-            "ID" : "Attribute1",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute10",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute2",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute3",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute4",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute5",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute6",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute7",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute8",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute9",
-            "Value" : ""
-          }
-        ],
-        "AlarmDelay" : false,
-        "AlarmHigh" : "",
-        "AlarmLow" : "",
-        "AlarmMessage" : "",
-        "AlarmOffDelay" : false,
-        "AlarmStrID" : 1,
-        "AlarmValueUpdate" : false,
-        "DeviationPtID" : "",
-        "HiDelayInterval" : "0",
-        "HiDelayUnit" : "cimNone",
-        "HiHiDelayInterval" : "0",
-        "HiHiDelayUnit" : "cimNone",
-        "HiHiOffDelayInterval" : "0",
-        "HiHiOffDelayUnit" : "cimNone",
-        "HiOffDelayInterval" : "0",
-        "HiOffDelayUnit" : "cimNone",
-        "LoDelayInterval" : "0",
-        "LoDelayUnit" : "cimNone",
-        "LoLoDelayInterval" : "0",
-        "LoLoDelayUnit" : "cimNone",
-        "LoLoOffDelayInterval" : "0",
-        "LoLoOffDelayUnit" : "cimNone",
-        "LoOffDelayInterval" : "0",
-        "LoOffDelayUnit" : "cimNone",
-        "TimeInterval" : "0",
-        "TimeUnit" : "cimNone",
-        "WarningHigh" : "",
-        "WarningLow" : ""
-      },
-      "PointEnum" : 
-      {
-        "Fields" : []
-      },
-      "PointID" : "EFFICIENCY",
-      "PointState" : true,
-      "PointTypeID" : "REAL",
-      "Published" : false,
-      "RangeLimitHigh" : "",
-      "RangeLimitLow" : "",
-      "ReadOnly" : false,
-      "ResourceID" : "",
-      "SafetyPointID" : "",
-      "ScreenID" : "",
-      "SetpointLimitHigh" : "",
-      "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
-        "Duration" : 0,
-        "MaxBuffered" : 0
-      },
-      "TriggerCheckPointID" : "",
-      "TriggerPointID" : "",
-      "Type" : "cimDevice",
-      "changeapproval" : "cimChangeapprovalNone"
-    },
-    {
-      "AttributeSet" : "",
-      "DataLen" : 0,
-      "DataType" : "cimReal",
-      "DeadBand" : "",
-      "DerivedPoint" : 
-      {
-        "CalculationType" : "cimExpression",
-        "InitState" : "cimUnavailable",
-        "InitValue" : "",
-        "Local" : false,
-        "PointExpression" : "",
-        "PointSetInterval" : "",
-        "PointSetTime" : "",
-        "ProcessID" : "",
-        "ResetPointID" : "",
-        "RolloverVal" : 0,
-        "VarianceValue" : 0
-      },
-      "Description" : "",
-      "DevicePoint" : 
-      {
-        "Address" : "{$ADDRESS}.Vibration",
-        "AddressOffset" : 0,
-        "AddressType" : "cimMMSFullyQualified",
-        "AnalogDeadband" : "",
-        "BufferRedundData" : false,
-        "DelayLoad" : false,
-        "DeviceID" : "{$DEVICE_ID}",
-        "JustInTime" : false,
-        "PollAfterSetpoint" : true,
-        "ScanRate" : 1,
-        "TriggerType" : "cimNoTrigger",
-        "TriggerValue" : "",
-        "UpdateCriteria" : "cimOnchange"
-      },
-      "DisplayFormat" : 
-      {
-        "FormatSpecifier" : "%-f",
-        "Justification" : "cimLeft",
-        "Precision" : "",
-        "Type" : "cimFixed",
-        "Width" : ""
-      },
-      "DisplayLimitHigh" : "",
-      "DisplayLimitLow" : "",
-      "Elements" : 1,
-      "EngineeringUnits" : 
-      {
-        "EuExpression" : "",
-        "EuLabel" : "mm/s",
-        "EuRevExp" : "",
-        "HighConvValue" : "",
-        "HighRawValue" : "",
-        "LinearConversion" : false,
-        "LowConvValue" : "",
-        "LowRawValue" : ""
-      },
-      "EnterprisePoint" : false,
-      "EnumerationID" : "",
-      "EuExists" : false,
-      "Expressions" : [],
-      "Extra" : 0,
-      "InvertAvailabilityTrigger" : false,
-      "Level" : 0,
-      "LogData" : false,
-      "LogDataHistorian" : false,
-      "MeasurementUnit" : 
-      {
-        "Description" : "Vibration",
-        "DisplayLabel" : "mm/s",
-        "FullName" : "",
-        "NamespaceUri" : "",
-        "NumericUnitId" : 1,
-        "UnitId" : "MM/S"
-      },
-      "MeasurementUnitID" : "MM/S",
-      "PointAlarm" : 
-      {
-        "Alarm" : 
-        {
-          "AckTimeout" : 0,
-          "AlarmClass" : "",
-          "AlarmDescription" : "",
-          "AlarmID" : "",
-          "AlarmMessage" : "",
-          "AlarmTypeID" : "",
-          "DeleteOpt" : "cimAckedReset",
-          "HelpFileName" : "",
-          "HiAckTimeout" : 0,
-          "HiDeleteOpt" : "cimAckedReset",
-          "HiHiAckTimeout" : 0,
-          "HiHiDeleteOpt" : "cimAckedReset",
-          "HiHiLogOpt" : "",
-          "HiHiRepeatTimeout" : 0,
-          "HiHiResetAllowed" : false,
-          "HiHiResetTimeout" : 0,
-          "HiLogOpt" : "",
-          "HiRepeatTimeout" : 0,
-          "HiResetAllowed" : false,
-          "HiResetTimeout" : 0,
-          "LoAckTimeout" : 0,
-          "LoDeleteOpt" : "cimAckedReset",
-          "LoLoAckTimeout" : 0,
-          "LoLoDeleteOpt" : "cimAckedReset",
-          "LoLoLogOpt" : "",
-          "LoLoRepeatTimeout" : 0,
-          "LoLoResetAllowed" : false,
-          "LoLoResetTimeout" : 0,
-          "LoLogOpt" : "",
-          "LoRepeatTimeout" : 0,
-          "LoResetAllowed" : false,
-          "LoResetTimeout" : 0,
-          "LogOpt" : "",
-          "MaxStacked" : 0,
-          "Published" : false,
-          "RepeatTimeout" : 0,
-          "ResetAllowed" : false,
-          "ResetTimeout" : 0,
-          "Routing" : [],
-          "Severity" : 0,
-          "changeapproval" : "cimChangeapprovalNone"
-        },
-        "AlarmConfigured" : false,
-        "AlarmCriteria" : "",
-        "AlarmCustomAttributes" : 
-        [
-          {
-            "Description" : "",
-            "ID" : "Attribute1",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute10",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute2",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute3",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute4",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute5",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute6",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute7",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute8",
-            "Value" : ""
-          },
-          {
-            "Description" : "",
-            "ID" : "Attribute9",
-            "Value" : ""
-          }
-        ],
-        "AlarmDelay" : false,
-        "AlarmHigh" : "",
-        "AlarmLow" : "",
-        "AlarmMessage" : "",
-        "AlarmOffDelay" : false,
-        "AlarmStrID" : 1,
-        "AlarmValueUpdate" : false,
-        "DeviationPtID" : "",
-        "HiDelayInterval" : "0",
-        "HiDelayUnit" : "cimNone",
-        "HiHiDelayInterval" : "0",
-        "HiHiDelayUnit" : "cimNone",
-        "HiHiOffDelayInterval" : "0",
-        "HiHiOffDelayUnit" : "cimNone",
-        "HiOffDelayInterval" : "0",
-        "HiOffDelayUnit" : "cimNone",
-        "LoDelayInterval" : "0",
-        "LoDelayUnit" : "cimNone",
-        "LoLoDelayInterval" : "0",
-        "LoLoDelayUnit" : "cimNone",
-        "LoLoOffDelayInterval" : "0",
-        "LoLoOffDelayUnit" : "cimNone",
-        "LoOffDelayInterval" : "0",
-        "LoOffDelayUnit" : "cimNone",
-        "TimeInterval" : "0",
-        "TimeUnit" : "cimNone",
-        "WarningHigh" : "",
-        "WarningLow" : ""
-      },
-      "PointEnum" : 
-      {
-        "Fields" : []
-      },
-      "PointID" : "VIBRATION",
-      "PointState" : true,
-      "PointTypeID" : "REAL",
-      "Published" : false,
-      "RangeLimitHigh" : "",
-      "RangeLimitLow" : "",
-      "ReadOnly" : false,
-      "ResourceID" : "",
-      "SafetyPointID" : "",
-      "ScreenID" : "",
-      "SetpointLimitHigh" : "",
-      "SetpointLimitLow" : "",
-      "TrendBuffering" : 
-      {
-        "Duration" : 0,
-        "MaxBuffered" : 0
-      },
-      "TriggerCheckPointID" : "",
-      "TriggerPointID" : "",
-      "Type" : "cimDevice",
+      "Type" : "cimGlobal",
       "changeapproval" : "cimChangeapprovalNone"
     }
   ],
-  "DateTime" : "2026-04-29T19:09:37.9609920Z",
+  "DateTime" : "2026-04-29T19:11:07.059674700Z",
   "DefaultGraphic" : "",
-  "Description" : "Centrifugal pump - 4 process variables",
-  "Events" : [],
+  "Description" : "",
+  "Events" : [ ],
   "FaceplateScreen" : "",
   "GraphicsFile" : "",
   "HelpFile" : "",
@@ -1036,5 +500,5 @@
   "PreCreateScript" : "",
   "PreDeleteScript" : "",
   "SchemaVersion" : "V1.0.0",
-  "Scripts" : []
+  "Scripts" : [ ]
 }

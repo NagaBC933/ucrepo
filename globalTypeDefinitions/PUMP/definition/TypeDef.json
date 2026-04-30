@@ -1,40 +1,24 @@
 {
-  "containments" : [],
-  "description" : "Centrifugal pump - 4 process variables",
+  "containments" : [ ],
+  "description" : "",
   "level" : "ASSET",
-  "name" : "PUMP",
-  "variables" : 
-  [
+  "name" : "Pump",
+  "subParameters" : [ ],
+  "variables" : [
     {
       "dataType" : "numeric",
       "description" : "",
-      "euName" : "m3/h",
-      "mandatory" : true,
-      "name" : "DISCHARGEFLOW",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "Pressure",
       "variableType" : "dynamic"
     },
     {
       "dataType" : "numeric",
       "description" : "",
-      "euName" : "bar",
-      "mandatory" : true,
-      "name" : "DISCHARGEPRESSURE",
-      "variableType" : "dynamic"
-    },
-    {
-      "dataType" : "numeric",
-      "description" : "",
-      "euName" : "%",
-      "mandatory" : true,
-      "name" : "EFFICIENCY",
-      "variableType" : "dynamic"
-    },
-    {
-      "dataType" : "numeric",
-      "description" : "",
-      "euName" : "mm/s",
-      "mandatory" : true,
-      "name" : "VIBRATION",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "Height",
       "variableType" : "dynamic"
     }
   ]
