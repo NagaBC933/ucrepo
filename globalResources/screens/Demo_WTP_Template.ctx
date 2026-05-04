@@ -8,8 +8,8 @@
       (GmmiObject "" 0
         (Help "" "Revision: 1.0" "")
         (GmmiPointMap
-          (GmmiPoint "WWW.SITE.PRETR.INPUTFLOW.PV" 10 1 1)
-          (GmmiPoint "WWW.SITE.PRETR.INPUTFLOW.SP" 10 1 1))
+          (GmmiPoint "WWW.SITE.PRETR.INPUTFLOW.PV" 8 0 1)
+          (GmmiPoint "WWW.SITE.PRETR.INPUTFLOW.SP" 8 0 1))
         (GmmiOptionTable
           (GmmiVariables
             (GmmiVariables "$OBJECT" "" 1)
@@ -962,9 +962,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.INTAKE.INFLOW" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.INTAKE.INFLOW" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -975,9 +975,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.DOSINGPUMP.CHEMICALDOSERATE" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.DOSINGPUMP.CHEMICALDOSERATE" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -988,9 +988,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.CHLORINATION.CHLORINEPV" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.CHLORINATION.CHLORINEPV" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1001,9 +1001,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTRATIONCONTROL.TURBIDITYPV" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTRATIONCONTROL.TURBIDITYPV" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1014,20 +1014,26 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "$LEVEL_POINT" "{&h7B}$OBJECT}.CLEARWELL.LEVEL" 2)
+                      (GmmiVariables "$LEVEL_POINT" "" 0)
+                      (GmmiVariables "$LEVEL_PT" "{&h7B}$OBJECT}.CLEARWELL.LEVEL" 2)
                       (GmmiVariables "HideXmtrSel" "0" 0)
-                      (GmmiVariables "hh" "" 0)
-                      (GmmiVariables "device" "" 0)
-                      (GmmiVariables "XmtA" "" 0)
-                      (GmmiVariables "revision" "V03.06.02C" 0)
-                      (GmmiVariables "ctrlr" "{&h7B}$OBJECT}.CLEARWELL.LEVEL" 0)
-                      (GmmiVariables "XmtB" "" 0)
-                      (GmmiVariables "abq" "" 0)
+                      (GmmiVariables "hhh_sp" "" 0)
+                      (GmmiVariables "enablefaceplate" "0" 0)
+                      (GmmiVariables "displayminmax" "1" 0)
+                      (GmmiVariables "$MAX_VAL" "100" 2)
                       (GmmiVariables "XmtC" "" 0)
+                      (GmmiVariables "$MIN_VAL" "0" 2)
+                      (GmmiVariables "XmtA" "" 0)
+                      (GmmiVariables "device" "" 0)
+                      (GmmiVariables "hh" "" 0)
+                      (GmmiVariables "XmtB" "" 0)
+                      (GmmiVariables "ctrlr" "{&h7B}$OBJECT}.CLEARWELL.LEVEL" 0)
+                      (GmmiVariables "revision" "V03.06.02C" 0)
+                      (GmmiVariables "XmtD" "" 0)
+                      (GmmiVariables "abq" "" 0)
                       (GmmiVariables "addtotrendvars" "" 0)
                       (GmmiVariables "customprecision" "0" 0)
                       (GmmiVariables "object_name" "flowbar" 0)
-                      (GmmiVariables "XmtD" "" 0)
                       (GmmiVariables "alarmdisplaymode" "0" 0)
                       (GmmiVariables "aliastooltip" "0" 0)
                       (GmmiVariables "bbq" "" 0)
@@ -1052,9 +1058,6 @@
                       (GmmiVariables "devicetooltip" "0" 0)
                       (GmmiVariables "dh" "" 0)
                       (GmmiVariables "h_sp" "" 0)
-                      (GmmiVariables "displayminmax" "1" 0)
-                      (GmmiVariables "enablefaceplate" "0" 0)
-                      (GmmiVariables "hhh_sp" "" 0)
                       (GmmiVariables "gotodefvar" "" 0)
                       (GmmiVariables "h" "" 0)
                       (GmmiVariables "l" "" 0)
@@ -1069,16 +1072,16 @@
                       (GmmiVariables "redundancy" "0" 0)
                       (GmmiVariables "setpoint" "SP" 0)
                       (GmmiVariables "sp" "0" 0)))
-                  (GmmiTabOrder -1)) "bibli.cim>LEVEL_BAR" 0.683384728 0 16647.237 0 0.6381728739 -1349.442047
-                (Rect 23920 7841 24476 5480))
+                  (GmmiTabOrder -1)) "bibli.cim>LEVEL_BAR" 0.683384728 0 18137.237 0 0.6381728739 -1229.442047
+                (Rect 23919 7846 24478 5474))
               (GmmiLinkContextFrameObject
                 (GmmiObject "" 0
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTER.INLETPRESSURE" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTER.INLETPRESSURE" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1089,9 +1092,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTER.OUTLETPRESSURE" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTER.OUTLETPRESSURE" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1102,9 +1105,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.OUTFLOW" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.OUTFLOW" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1115,9 +1118,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.OUTLETPUMP.PUMPFLOWRATE" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.OUTLETPUMP.PUMPFLOWRATE" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1128,9 +1131,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.CHLORINATION.CHLORINESP" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.CHLORINATION.CHLORINESP" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1141,9 +1144,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTRATIONCONTROL.TURBIDITYSP" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTRATIONCONTROL.TURBIDITYSP" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))
@@ -1154,9 +1157,9 @@
                   (Help "" "" "")
                   (GmmiOptionTable
                     (GmmiVariables
-                      (GmmiVariables "AH" "0" 2)
-                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTER.OUTFLOW" 2)
                       (GmmiVariables "CustomerID" "FG.1.F" 2)
+                      (GmmiVariables "AnalogValue" "{&h7B}$OBJECT}.FILTER.OUTFLOW" 2)
+                      (GmmiVariables "AH" "0" 2)
                       (GmmiVariables "AL" "0" 2)
                       (GmmiVariables "ScreenName" "Popup_Analog.cim" 2)
                       (GmmiVariables "SDH" "0" 2)))

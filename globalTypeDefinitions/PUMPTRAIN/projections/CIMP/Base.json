@@ -1,6 +1,7 @@
 {
-  "Actions" : [ ],
-  "Attributes" : [
+  "Actions" : [],
+  "Attributes" : 
+  [
     {
       "AttributeType" : "cimAttributeString",
       "BrowserType" : "",
@@ -88,12 +89,15 @@
   ],
   "ClassId" : "PUMPTRAIN",
   "ClassVersion" : 3,
-  "CompositeMembers" : [
+  "CompositeMembers" : 
+  [
     {
       "ClassID" : "MOTOR",
-      "ClassMembers" : [
+      "ClassMembers" : 
+      [
         {
-          "Attributes" : [
+          "Attributes" : 
+          [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -109,19 +113,21 @@
           ],
           "ClassID" : "MOTOR",
           "ID" : "MOTOR1",
-          "Routing" : [ ]
+          "Routing" : []
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [ ],
+      "Expressions" : [],
       "ID" : "MOTOR1"
     },
     {
       "ClassID" : "MOTOR",
-      "ClassMembers" : [
+      "ClassMembers" : 
+      [
         {
-          "Attributes" : [
+          "Attributes" : 
+          [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -137,19 +143,21 @@
           ],
           "ClassID" : "MOTOR",
           "ID" : "MOTOR2",
-          "Routing" : [ ]
+          "Routing" : []
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [ ],
+      "Expressions" : [],
       "ID" : "MOTOR2"
     },
     {
       "ClassID" : "MOTOR",
-      "ClassMembers" : [
+      "ClassMembers" : 
+      [
         {
-          "Attributes" : [
+          "Attributes" : 
+          [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -165,19 +173,21 @@
           ],
           "ClassID" : "MOTOR",
           "ID" : "MOTOR3",
-          "Routing" : [ ]
+          "Routing" : []
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [ ],
+      "Expressions" : [],
       "ID" : "MOTOR3"
     },
     {
       "ClassID" : "PUMP",
-      "ClassMembers" : [
+      "ClassMembers" : 
+      [
         {
-          "Attributes" : [
+          "Attributes" : 
+          [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -193,19 +203,21 @@
           ],
           "ClassID" : "PUMP",
           "ID" : "PUMP1",
-          "Routing" : [ ]
+          "Routing" : []
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [ ],
+      "Expressions" : [],
       "ID" : "PUMP1"
     },
     {
       "ClassID" : "PUMP",
-      "ClassMembers" : [
+      "ClassMembers" : 
+      [
         {
-          "Attributes" : [
+          "Attributes" : 
+          [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -221,19 +233,21 @@
           ],
           "ClassID" : "PUMP",
           "ID" : "PUMP2",
-          "Routing" : [ ]
+          "Routing" : []
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [ ],
+      "Expressions" : [],
       "ID" : "PUMP2"
     },
     {
       "ClassID" : "PUMP",
-      "ClassMembers" : [
+      "ClassMembers" : 
+      [
         {
-          "Attributes" : [
+          "Attributes" : 
+          [
             {
               "ID" : "$DEVICE_ID",
               "Value" : "{..\\$DEVICE_ID}"
@@ -249,20 +263,20 @@
           ],
           "ClassID" : "PUMP",
           "ID" : "PUMP3",
-          "Routing" : [ ]
+          "Routing" : []
         }
       ],
       "Count" : 1,
       "Description" : "",
-      "Expressions" : [ ],
+      "Expressions" : [],
       "ID" : "PUMP3"
     }
   ],
-  "DataItems" : [ ],
-  "DateTime" : "2026-04-29T14:05:38.6587485Z",
+  "DataItems" : [],
+  "DateTime" : "2026-05-04T14:40:35.3699316Z",
   "DefaultGraphic" : "",
   "Description" : "Pump train — 3 pumps + 3 motors",
-  "Events" : [ ],
+  "Events" : [],
   "FaceplateScreen" : "",
   "GraphicsFile" : "",
   "HelpFile" : "",
@@ -270,5 +284,5 @@
   "PreCreateScript" : "",
   "PreDeleteScript" : "",
   "SchemaVersion" : "V1.0.0",
-  "Scripts" : [ ]
+  "Scripts" : []
 }

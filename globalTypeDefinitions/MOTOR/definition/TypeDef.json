@@ -1,10 +1,10 @@
 {
-  "containments" : [ ],
+  "containments" : [],
   "description" : "Pump-driving motor - 3 electrical/mechanical ",
   "level" : "ASSET",
   "name" : "MOTOR",
-  "subParameters" : [ ],
-  "variables" : [
+  "variables" : 
+  [
     {
       "dataType" : "numeric",
       "description" : "",
