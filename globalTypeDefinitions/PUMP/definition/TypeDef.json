@@ -20,6 +20,14 @@
       "mandatory" : false,
       "name" : "Height",
       "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "Volume",
+      "variableType" : "dynamic"
     }
   ]
 }
