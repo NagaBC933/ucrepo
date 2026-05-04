@@ -17,6 +17,14 @@
     {
       "include" : true,
       "name" : "Volume"
+    },
+    {
+      "include" : true,
+      "name" : "speed"
+    },
+    {
+      "include" : true,
+      "name" : "Temperature"
     }
   ]
 }

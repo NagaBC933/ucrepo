@@ -28,6 +28,22 @@
       "mandatory" : false,
       "name" : "Volume",
       "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "speed",
+      "variableType" : "dynamic"
+    },
+    {
+      "dataType" : "numeric",
+      "description" : "",
+      "euName" : "rpm",
+      "mandatory" : false,
+      "name" : "Temperature",
+      "variableType" : "dynamic"
     }
   ]
 }
